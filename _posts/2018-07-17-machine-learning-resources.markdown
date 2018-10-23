@@ -26,12 +26,11 @@ Turi Create was sponsored by Apple, if familiar with Mac OS, then Turi Create is
 ## Databases for training
 
 * [kaggle](https://www.kaggle.com/datasets)
+* [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets.html)
 
 ## Related paper searching
 
-
 * [Google Scholar](https://scholar.google.se)
-
 * [arxiv-sanity](https://www.arxiv-sanity.com)
 
 
