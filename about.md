@@ -5,7 +5,7 @@ permalink: /about/
 ---
 ## About Me
 
-Hi! I am a Postdoc researcher of biomedical ultrasound imaging in Umeå University, Sweden. More infomation, please visit:
+Hi! I am now a Data Scientist & Researcher in Sandvik Coromant, Sweden. More information, please visit:
 [Full website](https://www.biajia.eu/cv)
 
 <img src="/images/biao.jpg" width="450" height="300"/>
@@ -13,11 +13,11 @@ Hi! I am a Postdoc researcher of biomedical ultrasound imaging in Umeå Universi
 
 ## Research Interest
 
-* Signal processing using Python, Matlab, etc.
+* Multi-sensor signal processing in sonar, radar, wireless communication, etc.
 
-* Ultrasound non-destructive testing
+* Ultrasound non-destructive testing and medical ultrasound.
 
-* Machine learning / Deep learning
+* Data science, machine learning / deep learning.
 
 
 ## Publications
@@ -30,10 +30,11 @@ Hi! I am a Postdoc researcher of biomedical ultrasound imaging in Umeå Universi
 
 Year      | Project            | Research 
 ----------|--------------------|--------
-2005-2013| Underwater Sound| Underwater acoustics, array signal processing
+2005-2013 | Underwater Sound   | Underwater acoustics, array signal processing
 2013      | SENSOCEAN          | Geo-acoustic inversion using vector sensor array
 2014-2015 | BondTest           | Industrial NDT using state-of-art ultrasonic techniques
-2016-     | Medical Ultrasound | Medical ultrasound image and video post-processing
+2016-2018 | Medical Ultrasound | Medical ultrasound image and video post-processing
+2019-     | Digital Machining  | Machine sensor signal processing 
 
 ---
 
