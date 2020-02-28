@@ -16,3 +16,5 @@ So the manufacturing and economical significance is great.
 Another important application of the accelerometer is for towed array sonar, when combined with depth sensor and heading sensor , it is possible to estimate the flexible array manifold, so that the sonar beamforming output SNR can be improved by compensating the array shape distortions.
 
 ## Accelerometer Signal Processing
+
+To be continued!!
