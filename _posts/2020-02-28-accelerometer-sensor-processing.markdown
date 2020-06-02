@@ -17,4 +17,6 @@ Another important application of the accelerometer is for towed array sonar, whe
 
 ## Accelerometer Signal Processing
 
+Accelerometer was successfully used in cutting tool breakage detection and prediction, and pure real-time Python algorithm and HMI was developed. 
+
 To be continued!!
