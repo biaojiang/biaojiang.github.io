@@ -6,7 +6,7 @@ permalink: /about/
 ## About Me
 
 Hi! I am now a Data Scientist & Researcher in Sandvik Coromant, Sweden. More information, please visit:
-[Full website](https://plotsignal/cv)
+[Full website](https://plotsignal.com/cv)
 
 <img src="/images/biao.jpg" width="450" height="300"/>
 
