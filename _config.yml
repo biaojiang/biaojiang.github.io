@@ -35,7 +35,7 @@ plugins:
 google_analytics: UA-112423768-1
 
 disqus:
-  shortname: biajia-eu
+  shortname: biajia-eu 
 
 jekyll-mentions:
   base_url: https://facebook.com
