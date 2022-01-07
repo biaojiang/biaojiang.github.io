@@ -57,4 +57,12 @@ gsutil cp \
     gs://$MY_BUCKET/just-a-folder/kitten3.png #download
 {% endhighlight %}
 
+## Visualization and dashboards
+### [looker](https://looker.com/)
+Looker can be used for real-time data visualization and beautiful analytics dashboard.
+
+### [What-If Tool](https://pair-code.github.io/what-if-tool/)
+
+An eye-catching beautiful tool to visualize the behavior of trained machine learning models, with minimal coding.
+
 > Personally, prefer GCP more than Azure. Cloud shell of GCP is much better than Azure, and the virtual machine can be `SSH` connected directly from the web.
