@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Test Google cloud platform!"
+title:  "Machine learning (ML) and AI practices!"
 date:   2022-01-07 17:21:00 +0100
 categories: projects
 #comments: false
@@ -19,5 +19,8 @@ All in Python, which is good for Python lovers.
 1. [Iris classification](https://share.streamlit.io/biaojiang/demoai/main/test_iris.py). It is a first test by taking some codes from someone's post, with `plotly` replaced with `matplotlib`, and the app code will be updated later.
 `requirements.txt` is important, otherwise, there will be compiling errors.
 
+### Website editors
+
+[Codepen](https://codepen.io/) or [Glitch](https://glitch.com/).
 
 > Streamlit is nice for fast model deploying. However, the price is a little bit expensive.

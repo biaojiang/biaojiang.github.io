@@ -30,6 +30,10 @@ Tried to use VSCode to connect to the notebook, but it didn't work. It is possib
 
 ### [Kubeflow Pipelines - GitHub Issue Summarization](https://codelabs.developers.google.com/codelabs/cloud-kubeflow-pipelines-gis?hl=en)
 
+### [Building a financial ML model with the What-If Tool and Vertex AI](https://codelabs.developers.google.com/vertex-xgb-wit?hl=en#0)
+
+The objective is to test how to deploy AI models to Vertex AI.
+Spent some time to fix the Xgboost loading problem in notebook. However, it was found that it was OK in command line mode, and it was the `ipykernel` problem.
 
 
 
@@ -64,5 +68,8 @@ Looker can be used for real-time data visualization and beautiful analytics dash
 ### [What-If Tool](https://pair-code.github.io/what-if-tool/)
 
 An eye-catching beautiful tool to visualize the behavior of trained machine learning models, with minimal coding.
+
+## Deployment
+[Streamlit](https://streamlit.io) is a nice tool to quickly deploy the data science Web App, you can directly deploy from the GitHub repository, but the web service can only be public, and the number of apps is limited. So, I decided to deploy to GCP first, since it was found that GCP is much easier to use than .NET dominated Azure. Luckily, after a weekend's try, it has been successful to deploy Streamlit with BigQuery data querying to both Cloud Run and App Engine. However, Cloud Run cannot control the access by Gmail, if not set public, even yourself can't visit the App link. Therefore, I turned to App Engine, it is fantastic to use the Google account to control the access. But, if caring about the cost, it needs to stop the application when you don't use it.
 
 > Personally, prefer GCP more than Azure. Cloud shell of GCP is much better than Azure, and the virtual machine can be `SSH` connected directly from the web.
