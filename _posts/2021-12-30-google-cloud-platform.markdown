@@ -72,4 +72,9 @@ An eye-catching beautiful tool to visualize the behavior of trained machine lear
 ## Deployment
 [Streamlit](https://streamlit.io) is a nice tool to quickly deploy the data science Web App, you can directly deploy from the GitHub repository, but the web service can only be public, and the number of apps is limited. So, I decided to deploy to GCP first, since it was found that GCP is much easier to use than .NET dominated Azure. Luckily, after a weekend's try, it has been successful to deploy Streamlit with BigQuery data querying to both Cloud Run and App Engine. However, Cloud Run cannot control the access by Gmail, if not set public, even yourself can't visit the App link. Therefore, I turned to App Engine, it is fantastic to use the Google account to control the access. But, if caring about the cost, it needs to stop the application when you don't use it.
 
+The Streamlit app was successfully deployed to both Azure App Service later as well.
+
+## Website hosting
+GCP storage bucket is another way to host the static website other than the Github pages, for which the personal website must be open source. The cost of GCP web hosting is manageable for small websites. 
+
 > Personally, prefer GCP more than Azure. Cloud shell of GCP is much better than Azure, and the virtual machine can be `SSH` connected directly from the web.
