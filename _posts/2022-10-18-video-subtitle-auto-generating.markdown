@@ -25,6 +25,7 @@ For this purpose, Python is the first choice for speech recognition.
 
 - An example of `.srt` subtitle files compared in VS Code:  
 
-![srt files comparison](/images/srt_swidish_english_chinese.png){:width="500px"}
+![srt files comparison](/images/srt_swidish_english_chinese.PNG){:width="500px"}
 {:center-img}
 
+The subtitles look good, and it does not need to be perfect, but giving some hints is ok. This video is from a Vlogger, and the speech recognition API can't capture all the words sometimes when the speaker is too fast or if there are fast word connections.
