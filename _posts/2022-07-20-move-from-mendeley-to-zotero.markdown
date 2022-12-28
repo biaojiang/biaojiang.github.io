@@ -2,7 +2,7 @@
 layout: post
 title: "Move from Mendeley to Zotero"
 date:   2022-07-20 10:00:00 +0200
-categories: personal-thoughts
+categories: thoughts
 math: true
 ---
 
