@@ -2,7 +2,7 @@
 layout: post
 title:  "2 Telegram channels launched!"
 date:   2021-02-12 21:12:00 +0100
-categories: projects
+categories: thoughts
 math: false
 ---
 
