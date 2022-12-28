@@ -2,7 +2,7 @@
 layout: post
 title:  "Machine learning (ML) and AI practices!"
 date:   2022-01-07 17:21:00 +0100
-categories: projects
+categories: data-science
 #comments: false
 math: false
 ---
