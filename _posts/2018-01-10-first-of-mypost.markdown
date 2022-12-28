@@ -2,7 +2,7 @@
 layout: post
 title:  "How to quickly publish a Jekyll-theme webpage!"
 date:   2018-01-10 10:12:27 +0100
-categories: personal thoughts
+categories: personal-thoughts
 ---
 
 After having been struggling with Jekyll and Git commands to generate Github webpages using other people's templates, for a few hours, but not succeeded in displaying awesome site. The results were frustrating, only showing ugly .html file. I'm also failed to debug Jekyll website in Netlify server, so later gave up Netlify. Later I found maybe it is possible to try `jekyll new mysite` to generate the dependent files, then tested and just used the default officially supported Jekyll-theme-minima, then succeeded to deploy a Github page :sparkles::congratulations:.
