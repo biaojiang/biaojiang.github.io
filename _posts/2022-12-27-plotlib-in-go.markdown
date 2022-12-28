@@ -2,7 +2,7 @@
 layout: post
 title:  "Data plotlib in Golang!"
 date:   2022-12-27 17:30:00 +0100
-categories: projects
+categories: data-science
 math: true
 ---
 

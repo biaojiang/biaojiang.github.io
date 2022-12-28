@@ -1,0 +1,14 @@
+---
+layout: category-data-science
+title: Data Science
+---
+
+<h1>Data Science</h1>
+
+<ul>
+  {% for post in site.categories.data-science %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>

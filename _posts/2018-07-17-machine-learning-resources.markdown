@@ -2,7 +2,7 @@
 layout: post
 title:  "Machine learning and deep learning resources!"
 date:   2018-07-17 11:56:00 +0100
-categories: personal thoughts
+categories: data-science
 math: false
 ---
 

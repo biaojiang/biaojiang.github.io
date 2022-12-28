@@ -2,7 +2,7 @@
 layout: post
 title: "Video Subtitle Auto-generating with Python and Burning with ffmpeg"
 date:   2022-10-18 13:40:00 +0200
-categories: technologies
+categories: projects
 math: true
 ---
 

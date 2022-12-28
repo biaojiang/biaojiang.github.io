@@ -2,7 +2,7 @@
 layout: post
 title:  "Test Google cloud platform!"
 date:   2021-12-30 13:33:00 +0100
-categories: projects
+categories: data-science
 #comments: false
 math: false
 ---
