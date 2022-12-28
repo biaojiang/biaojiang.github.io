@@ -2,7 +2,7 @@
 layout: post
 title:  "Why autonomous driving still a long way to go!"
 date:   2022-07-06 19:21:00 +0200
-categories: technologies
+categories: thoughts
 tag: autonomous driving
 #comments: false
 math: false
