@@ -3,6 +3,7 @@
 <html>
   <head>
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
   </head>
   <body>
     <header>
@@ -17,5 +18,8 @@
     <main>
       {{ content }}
     </main>
+    <footer>
+      <p>Copyright {{ site.time | date: "%Y" }}</p>
+  </footer>
   </body>
 </html>
