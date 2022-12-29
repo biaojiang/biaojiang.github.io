@@ -2,7 +2,7 @@
 layout: post
 title:  "New Google domain started!"
 date:   2021-03-23 22:06:00 +0100
-categories: personal-thoughts
+categories: thoughts
 #comments: false
 math: false
 ---
