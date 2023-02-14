@@ -52,9 +52,17 @@ plt.SaveFig()
 
 
 ### Result
+1. Line and point/marker plotting
 
 Narrowband beamforming of a 16-element array was simulated, and the resulting beampatterns for two different windowing functions are compared as follows:
 
 {:center-img: style="text-align: center;"}
 ![narrowband beamforming](/images/narrowbeam_win_cmp.svg){: height="480px" width="640px" title="narrowband beamforming comparing two windows"}
+{:center-img}
+
+2. Scatter plotting
+[Iris flower data set](!https://en.wikipedia.org/wiki/Iris_flower_data_set) was used to test the Golang machine learning performance. The data feature distribution was visualized with scatter plotting:
+
+{:center-img: style="text-align: center;"}
+![iris sepal length vs. width](/images/iris_scatter_sepal.svg){: height="480px" width="640px" title="iris sepal length vs. width"}
 {:center-img}
