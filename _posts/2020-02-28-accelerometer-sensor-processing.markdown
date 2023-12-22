@@ -7,7 +7,7 @@ math: false
 ---
 
 ## Accelerometer Sensor
-[**Accelerometer**](https://en.wikipedia.org/wiki/Accelerometer) is widely used in machining tool condition monitoring, with proper algorithms, the cutting tool wear and breakage can be detected and predicted. The benefits of tool condtion monitoring are:
+[**Accelerometer**](https://en.wikipedia.org/wiki/Accelerometer) is widely used in machining tool condition monitoring, with proper algorithms, the cutting tool wear and breakage can be detected and predicted. The benefits of tool condition monitoring are:
 * Extend the cutting tool life.
 * Avoid the workpiece being damaged by the worn tool.
 
