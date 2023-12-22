@@ -32,7 +32,7 @@ plugins:
   - jekyll-mentions
   - jekyll-seo-tag
 
-google_analytics: UA-112423768-1
+google_analytics: G-ZWHEYLEC5T
 
 disqus:
   shortname: biajia-eu 
