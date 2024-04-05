@@ -2,7 +2,7 @@
 layout: post
 title:  "Machine learning and AI frameworks and resources!"
 # date:   2018-07-17 11:56:00 +0100
-date:   2024-01-06 10:22:00 +0100
+date:   2024-04-05 11:00:00 +0200
 categories: data-science
 math: false
 ---
@@ -27,8 +27,18 @@ Being supported by Facebook, PyTorch has good compatibility with Numpy, and it p
 | Community | 👥 Larger and more active | 👨‍💻 Smaller and growing |
 | Use Cases | 🏭 Production-oriented | 👩‍🔬 Research and development |
 
+* [Flax]
+
+[Flax] is a neural network library built on top of [JAX], which is a high-performance Python library designed for numerical computation and machine learning with features:
+
+1. Automatic differentiation: Simplifies calculating gradients, crucial for training neural networks.
+1. Vectorization: Speeds up computations by operating on entire arrays at once.
+1. Just-In-Time (JIT) compilation: Optimizes code for specific hardware, leading to significant performance gains.
+
+So, [JAX]'s JIT compilation and [Flax]'s efficient use of [JAX] lead to fast training times. The cons is that both of these are less mature ecosystems, but it is worth exploring.
+
 ### Golang ML frameworks
-* [mlpack][mlpack]
+* [mlpack]
 
 It is a fast, lightweight header-only C++ machine learning library that aims to provide fast, extensible implementations of cutting-edge machine learning algorithms. It depends only on the **Armadillo** linear algebra library and the **cereal** serialization library.
 
@@ -155,3 +165,5 @@ ML/AI can improve our daily life efficiency, e.g., we can use [Google SGE, gener
 [CandleMinst]: https://x.com/biajia/status/1711375014136529292?s=20
 [teguar]: https://teguar.com/industrial-careers-in-the-age-of-machine-learning/
 [SGELab]: https://labs.google.com/search?authuser=0&source=srp&is=ag
+[JAX]: https://jax.readthedocs.io/en/latest/
+[Flax]: https://flax.readthedocs.io/en/latest/
