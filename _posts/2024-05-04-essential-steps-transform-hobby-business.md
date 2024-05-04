@@ -5,7 +5,6 @@ date: 2024-05-04 17:00:00 +0200
 categories: thoughts
 ---
 
-## **Essential Steps to Transform Your Hobby into a Thriving Business**
 _Aimee Lyons_
 
 {:center-img: style="text-align: center;"}
