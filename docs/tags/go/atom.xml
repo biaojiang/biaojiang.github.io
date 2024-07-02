@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Biao J.&#x27;s Online Portfolio - go</title>
+    <subtitle>Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://plotsignal.com/tags/go/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://plotsignal.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-12-27T16:30:00+00:00</updated>
+    <id>https://plotsignal.com/tags/go/atom.xml</id>
+    <entry xml:lang="en">
+        <title>A Versatile Golang Plotting Library (plotlib-go) Developed</title>
+        <published>2022-12-27T16:30:00+00:00</published>
+        <updated>2022-12-27T16:30:00+00:00</updated>
+        
+        <author>
+          <name>
+            Biao Jiang
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://plotsignal.com/projects/plotlib-go/"/>
+        <id>https://plotsignal.com/projects/plotlib-go/</id>
+        
+        <content type="html" xml:base="https://plotsignal.com/projects/plotlib-go/">&lt;h2 id=&quot;motivative&quot;&gt;Motivative&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;go.dev&quot;&gt;The Go Programming Language&lt;&#x2F;a&gt; is much faster than Python, and the syntax is in a modern design. I got familiar with Go by implementing the acoustic array beamforming modules. Initially, the results were exported to plot in Python, but it was not convenient. Therefore, finding a way to directly plot the high-quality figures in Go could improve the development efficiency later.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;plot-in-go&quot;&gt;Plot in Go&lt;&#x2F;h2&gt;
+&lt;p&gt;The plotlib is developed on the top of &lt;a href=&quot;https:&#x2F;&#x2F;pkg.go.dev&#x2F;gonum.org&#x2F;v1&#x2F;plot&quot;&gt;gonum&#x2F;plot&lt;&#x2F;a&gt;. The &lt;code&gt;marker&lt;&#x2F;code&gt; defined in other plotting libraries, e.g., matplotlib, is named &lt;code&gt;points&lt;&#x2F;code&gt; in gonum. To implement a function similar to &lt;code&gt;imshow,&lt;&#x2F;code&gt; we need to use &lt;code&gt;heatmap.&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;interface-between-the-plotlib-and-the-main-function&quot;&gt;Interface between the plotlib and the main function&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Line plotting struct&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;go&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-go &quot;&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; Line structure
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;type &lt;&#x2F;span&gt;&lt;span&gt;Line &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;P         &lt;&#x2F;span&gt;&lt;span&gt;*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plot&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;Plot
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;XYs       &lt;&#x2F;span&gt;&lt;span&gt;[]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plotter&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;XYs &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; XY data
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Width     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;float64
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Height    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;float64
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Color     &lt;&#x2F;span&gt;&lt;span&gt;[]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;string
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Xlabel    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;string
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Ylabel    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;string
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Title     &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;string
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Figname   &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;string
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;GridOn    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;bool
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;PointsOn  &lt;&#x2F;span&gt;&lt;span&gt;[]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; add points&#x2F;markers
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;LineWidth &lt;&#x2F;span&gt;&lt;span&gt;[]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;float64
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Ticks     &lt;&#x2F;span&gt;&lt;span&gt;[]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;float64
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Legend    &lt;&#x2F;span&gt;&lt;span&gt;[]&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;string
+&lt;&#x2F;span&gt;&lt;span&gt;	&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;LegendPos &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;struct&lt;&#x2F;span&gt;&lt;span&gt;{ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Left&lt;&#x2F;span&gt;&lt;span&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Top &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;bool &lt;&#x2F;span&gt;&lt;span&gt;} &lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F; legned position
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Plotting&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;go&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-go &quot;&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;var &lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plt plotlib&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;Plt &lt;&#x2F;span&gt;&lt;span&gt;= &amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;line
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plt&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;AddDataXY&lt;&#x2F;span&gt;&lt;span&gt;(&amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;x_data&lt;&#x2F;span&gt;&lt;span&gt;, &amp;amp;&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;y_data&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plt&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;Plot&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;Save figure&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre data-lang=&quot;go&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-go &quot;&gt;&lt;code class=&quot;language-go&quot; data-lang=&quot;go&quot;&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;plt&lt;&#x2F;span&gt;&lt;span&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;SaveFig&lt;&#x2F;span&gt;&lt;span&gt;()
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;result&quot;&gt;Result&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Line and point&#x2F;marker plotting&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;Narrowband beamforming of a 16-element array was simulated, and the resulting beampatterns for two different windowing functions are compared as follows:&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;plotsignal.com&#x2F;projects&#x2F;plotlib-go&#x2F;.&#x2F;narrowbeam_win_cmp.svg&quot; alt=&quot;narrowband beamforming&quot; title=&quot;narrowband beamforming comparing two windows&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+&lt;ol start=&quot;2&quot;&gt;
+&lt;li&gt;Scatter plotting
+&lt;a href=&quot;https:&#x2F;&#x2F;plotsignal.com&#x2F;projects&#x2F;plotlib-go&#x2F;!https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Iris_flower_data_set&quot;&gt;Iris flower data set&lt;&#x2F;a&gt; was used to test the Golang machine learning performance. The data feature distribution was visualized with scatter plotting:&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;plotsignal.com&#x2F;projects&#x2F;plotlib-go&#x2F;.&#x2F;iris_scatter_sepal.svg&quot; alt=&quot;iris sepal length vs. width&quot; title=&quot;iris_scatter_sepal&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

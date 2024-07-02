@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <title>Implementing the Zoom FFT mixer approach in Python - Biao J.&#x27;s Online Portfolio</title>
+    <meta name="description" content="Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.">
+
+    
+    <link rel="stylesheet" href="https://plotsignal.com/base.css">
+    <link rel="stylesheet" href="https://plotsignal.com/auto.css">
+
+    <link rel="preload" href=https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;font-awesome&#x2F;6.3.0&#x2F;css&#x2F;all.min.css as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href=https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;font-awesome&#x2F;6.3.0&#x2F;css&#x2F;all.min.css></noscript>
+
+    
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://plotsignal.com/atom.xml">
+    
+
+    
+    
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="og:title" content="Implementing the Zoom FFT mixer approach in Python">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="https://plotsignal.com/about/">
+    <meta property="article:published_time" content="2018-05-06T11:15:00Z">
+    
+    
+    <meta property="article:tag" content="python">
+    
+    
+    
+    
+    <meta property="og:url" content="https://plotsignal.com/projects/zoom-fft/">
+    
+    
+
+
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWHEYLEC5T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZWHEYLEC5T');
+</script>
+
+<link rel="stylesheet" href="https://plotsignal.com/bj.css">
+<!-- MathJax enabling -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+<div class="container">
+    
+    
+    <header>
+        <h1 class="site-header">
+            <a href="https:&#x2F;&#x2F;plotsignal.com">Biao J.&#x27;s Online Portfolio</a>
+        </h1>
+        <nav>
+            <ul>
+            
+            
+                
+                <li><a  href="&#x2F;projects&#x2F;">Projects</a></li>
+            
+                
+                <li><a  href="&#x2F;blog&#x2F;">Blog</a></li>
+            
+                
+                <li><a  href="&#x2F;collabs&#x2F;">Collabs</a></li>
+            
+                
+                <li><a  href="&#x2F;about&#x2F;">About</a></li>
+            
+            
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+<article class="post">
+    
+    
+    
+        
+        <header>
+            <h1>Implementing the Zoom FFT mixer approach in Python</h1>
+        </header>
+        
+    <div class="article-info">
+        
+        
+        <div class="article-date">May  6, 2018 ◦ 3 min ◦ </div>
+        
+        <div class="article-taxonomies">
+            
+                <ul class="article-categories">
+                    
+                    <li><a href="https://plotsignal.com/categories/dsp/">DSP</a></li>
+                    
+                </ul>
+            
+            
+                <ul class="article-tags">
+                    
+                    <li><a href="https://plotsignal.com/tags/python/">#python</a></li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+    
+    
+    <div class="content">
+        <h2 id="zoom-fft">Zoom FFT</h2>
+<p><a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a> was used to analyze a frequency subband. The idea behind zoom FFT is to retain the same resolution, which could be achieved with a full-size FFT on the original signal, by computing a small-size FFT on a down-sampled shorter signal. Thus, the FFT efficient could be improved while maintaining the same resolution.</p>
+<p>This is intuitive: for a decimation factor of $D$, the new sampling rate is $f_{sd} = f_s/D$, and the new frame size (and FFT length) is $L_d = L/D$, so the resolution of the decimated signal is $f_{sd}/L_d = f_s/L$.</p>
+<h2 id="implementation">Implementation</h2>
+<h3 id="the-mixer-approach">The Mixer Approach</h3>
+<p>See <a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a>: The popular mixer Zoom FFT method consists of first shifting the band of interest down to DC using a mixer, and then performing lowpass filtering and decimation by a factor of BWFactor (using an efficient polyphase FIR decimation structure).</p>
+<p><strong>Note:</strong> For short signal, the polyphase FIR designing is tricky, sometimes it will distort the spectrum, as in the Matlab example, the transient filtering effects were eliminated by repeating 10 times of filtering. So the conventional Fourier resampling method is recommended here.</p>
+<h3 id="python-codes">Python Codes</h3>
+<ul>
+<li>Import modules</li>
+</ul>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span style="color:#b48ead;">import </span><span>numpy </span><span style="color:#b48ead;">as </span><span>np
+</span><span style="color:#b48ead;">from </span><span>matplotlib </span><span style="color:#b48ead;">import </span><span>pyplot </span><span style="color:#b48ead;">as </span><span>plt
+</span><span style="color:#b48ead;">from </span><span>numpy </span><span style="color:#b48ead;">import </span><span>pi
+</span><span style="color:#b48ead;">from </span><span>numpy.fft </span><span style="color:#b48ead;">import </span><span>fft, fftfreq, fftshift
+</span><span style="color:#b48ead;">from </span><span>scipy </span><span style="color:#b48ead;">import </span><span>signal
+</span></code></pre>
+<ul>
+<li>Generate signal</li>
+</ul>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>
+</span><span style="color:#b48ead;">def </span><span style="color:#8fa1b3;">SineWave</span><span>(</span><span style="color:#bf616a;">f</span><span>, </span><span style="color:#bf616a;">fs</span><span>, </span><span style="color:#bf616a;">length</span><span>, </span><span style="color:#bf616a;">amplitude</span><span>=</span><span style="color:#d08770;">1</span><span>):
+</span><span>    x = amplitude * np.</span><span style="color:#bf616a;">sin</span><span>(</span><span style="color:#d08770;">2 </span><span>* pi * f / fs * np.</span><span style="color:#bf616a;">arange</span><span>(length))
+</span><span>    </span><span style="color:#b48ead;">return </span><span>x
+</span><span>
+</span><span>L = </span><span style="color:#d08770;">32
+</span><span>fs = </span><span style="color:#d08770;">128
+</span><span>res = fs/L
+</span><span>f1 = </span><span style="color:#d08770;">40
+</span><span>f2 = f1 + res
+</span><span>x = </span><span style="color:#bf616a;">SineWave</span><span>(f1, fs, L) + </span><span style="color:#bf616a;">SineWave</span><span>(f2, fs, L, </span><span style="color:#d08770;">2</span><span>)
+</span><span>
+</span></code></pre>
+<ul>
+<li>Plot the original FFT</li>
+</ul>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>X = </span><span style="color:#bf616a;">fft</span><span>(x)
+</span><span>freq = </span><span style="color:#bf616a;">fftfreq</span><span>(L, </span><span style="color:#bf616a;">d</span><span>=</span><span style="color:#d08770;">1</span><span>/fs)
+</span><span>
+</span><span>fig1, ax1 = plt.</span><span style="color:#bf616a;">subplots</span><span>(</span><span style="color:#d08770;">2</span><span>)
+</span><span style="color:#65737e;">#fig1.clf()
+</span><span>ax1[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">stem</span><span>(</span><span style="color:#bf616a;">fftshift</span><span>(freq), </span><span style="color:#96b5b4;">abs</span><span>(</span><span style="color:#bf616a;">fftshift</span><span>(X)) / L)
+</span><span style="color:#65737e;">#ax1[0].set_xlabel(&#39;Frequency (Hz)&#39;, fontsize=12)
+</span><span>ax1[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">set_ylabel</span><span>(&#39;</span><span style="color:#a3be8c;">Magnitude</span><span>&#39;, </span><span style="color:#bf616a;">fontsize</span><span>=</span><span style="color:#d08770;">12</span><span>)
+</span><span>ax1[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">set_title</span><span>(&#39;</span><span style="color:#a3be8c;">Two-sided spectrum</span><span>&#39;, </span><span style="color:#bf616a;">fontsize</span><span>=</span><span style="color:#d08770;">12</span><span>)
+</span><span>ax1[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">grid</span><span>()
+</span></code></pre>
+<ul>
+<li>Zoom FFT using mixer approach</li>
+</ul>
+<pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>BWOfInterest = </span><span style="color:#d08770;">48 </span><span>- </span><span style="color:#d08770;">16
+</span><span>Fc = (</span><span style="color:#d08770;">16 </span><span>+ </span><span style="color:#d08770;">48</span><span>) / </span><span style="color:#d08770;">2
+</span><span>BWFactor = np.</span><span style="color:#bf616a;">floor</span><span>(fs / BWOfInterest).</span><span style="color:#bf616a;">astype</span><span>(np.uint8)
+</span><span>
+</span><span style="color:#65737e;"># mix the signal down to DC, and filter it through the FIR decimator
+</span><span>indVect = np.</span><span style="color:#bf616a;">arange</span><span>(L)
+</span><span>y = x * np.</span><span style="color:#bf616a;">exp</span><span>(-</span><span style="color:#d08770;">1</span><span style="color:#b48ead;">j </span><span>* </span><span style="color:#d08770;">2 </span><span>* pi * indVect * Fc / fs)
+</span><span>xd = signal.</span><span style="color:#bf616a;">resample</span><span>(y, </span><span style="color:#d08770;">8</span><span>)
+</span><span style="color:#65737e;"># polyphase method as in Matlab
+</span><span style="color:#65737e;">#indVect = np.arange(L * 10)
+</span><span style="color:#65737e;">#y = np.tile(x, 10) * np.exp(-1j * 2 * pi * indVect * Fc / fs)
+</span><span style="color:#65737e;">#beta = signal.kaiser_beta(80)
+</span><span style="color:#65737e;">#xd = signal.resample_poly(y, up=1, down=BWFactor, window=signal.get_window((&#39;kaiser&#39;, beta), 6))
+</span><span style="color:#65737e;">#xd = xd[-len(xd) // 10:]
+</span><span style="color:#65737e;">#xd = xd[-2 * len(xd) // 10:-len(xd) // 10]
+</span><span>fftlen = </span><span style="color:#96b5b4;">len</span><span>(xd)
+</span><span>Xd = </span><span style="color:#bf616a;">fft</span><span>(xd)
+</span><span>
+</span><span>Ld  = L / BWFactor;
+</span><span>fsd = fs / BWFactor;
+</span><span>F   = Fc + fsd / fftlen * np.</span><span style="color:#bf616a;">arange</span><span>(fftlen) - fsd / </span><span style="color:#d08770;">2
+</span><span>ax1[</span><span style="color:#d08770;">1</span><span>]. </span><span style="color:#bf616a;">stem</span><span>(F, np.</span><span style="color:#bf616a;">abs</span><span>(</span><span style="color:#bf616a;">fftshift</span><span>(Xd)) / Ld, </span><span style="color:#bf616a;">linefmt</span><span>=&#39;</span><span style="color:#a3be8c;">C1-.</span><span>&#39;, </span><span style="color:#bf616a;">markerfmt</span><span>=&#39;</span><span style="color:#a3be8c;">C1s</span><span>&#39;)
+</span><span>ax1[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">grid</span><span>()
+</span><span>ax1[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">set_xlabel</span><span>(&#39;</span><span style="color:#a3be8c;">Frequency (Hz)</span><span>&#39;, </span><span style="color:#bf616a;">fontsize</span><span>=</span><span style="color:#d08770;">12</span><span>)
+</span><span>ax1[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">set_ylabel</span><span>(&#39;</span><span style="color:#a3be8c;">Magnitude</span><span>&#39;, </span><span style="color:#bf616a;">fontsize</span><span>=</span><span style="color:#d08770;">12</span><span>)
+</span><span>ax1[</span><span style="color:#d08770;">1</span><span>].</span><span style="color:#bf616a;">set_title</span><span>(&#39;</span><span style="color:#a3be8c;">Zoom FFT Spectrum. Mixer Approach.</span><span>&#39;, </span><span style="color:#bf616a;">fontsize</span><span>=</span><span style="color:#d08770;">12</span><span>)
+</span><span>fig1.</span><span style="color:#bf616a;">subplots_adjust</span><span>(</span><span style="color:#bf616a;">hspace</span><span>=</span><span style="color:#d08770;">0.35</span><span>)
+</span></code></pre>
+<h3 id="result">Result</h3>
+<p>The following result is the same as in <a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a>, but much faster.</p>
+<!-- templates/shortcodes/imshow_rel.html, show relative scaled image -->
+
+    
+    
+    
+
+
+
+ <!-- no resize to keep picture sharp-->
+
+
+
+
+
+
+<figure>
+  <img src="https:&#x2F;&#x2F;plotsignal.com&#x2F;processed_images&#x2F;zoom_fft_mixer_approach.bd40e35e6b874531.png"alt="Zoom-FFT with the mixer approach"
+    title="Zoom-FFT with the mixer approach"
+  /><figcaption>Zoom-FFT with the mixer approach</figcaption></figure>
+
+
+    </div>
+    
+
+    
+</article>
+
+
+    <footer>
+        <p>
+            
+<span class="icon-text">
+  
+
+  
+  <a href="https://twitter.com/biajia" aria-label="Open biajia Twitter" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true" title="Twitter"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https://github.com/biaojiang" aria-label="Open biaojiang GitHub" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-github fa-lg" aria-hidden="true" title="GitHub"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/biaojiang" aria-label="Open biaojiang LinkedIn" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true" title="LinkedIn"></i>
+    </span>
+  </a>
+  
+
+  
+
+  
+
+  
+
+  
+  <a href="mailto:info@plotsignal.com" aria-label="Email info@plotsignal.com" target="_blank">
+    <span class="icon is-large">
+      <i class="far fa-envelope fa-lg" aria-hidden="true" title="email"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https:&#x2F;&#x2F;plotsignal.com/atom.xml" aria-label="Open atom xml feed" target="_blank">
+    <span class="icon is-large">
+      <i class="fas fa-rss fa-lg" aria-hidden="true" title="atom xml feed"></i>
+    </span>
+  </a>
+  
+
+  
+  
+  <a href=https:&#x2F;&#x2F;www.reddit.com&#x2F;user&#x2F;biajia&#x2F; aria-label="Open Reddit" target="_blank">
+    <span class="icon is-large">
+      <i class="fa-brands fa-reddit fa-lg" aria-hidden="true" title=Reddit></i>
+    </span>
+  </a>
+  
+  
+</span>
+
+        </p>
+        <p>
+            
+            
+        </p>
+    </footer>
+</div>
+</body>
+</html>

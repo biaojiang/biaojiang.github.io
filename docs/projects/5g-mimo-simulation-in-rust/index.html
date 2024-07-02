@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <title>5G MIMO algorithm simulations in Rust - Biao J.&#x27;s Online Portfolio</title>
+    <meta name="description" content="Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.">
+
+    
+    <link rel="stylesheet" href="https://plotsignal.com/base.css">
+    <link rel="stylesheet" href="https://plotsignal.com/auto.css">
+
+    <link rel="preload" href=https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;font-awesome&#x2F;6.3.0&#x2F;css&#x2F;all.min.css as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href=https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;font-awesome&#x2F;6.3.0&#x2F;css&#x2F;all.min.css></noscript>
+
+    
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://plotsignal.com/atom.xml">
+    
+
+    
+    
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="og:title" content="5G MIMO algorithm simulations in Rust">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="https://plotsignal.com/about/">
+    <meta property="article:published_time" content="2024-01-06T14:58:00Z">
+    
+    
+    <meta property="article:tag" content="algorithm">
+    
+    <meta property="article:tag" content="rust">
+    
+    
+    
+    
+    <meta property="og:url" content="https://plotsignal.com/projects/5g-mimo-simulation-in-rust/">
+    
+    
+
+
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWHEYLEC5T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZWHEYLEC5T');
+</script>
+
+<link rel="stylesheet" href="https://plotsignal.com/bj.css">
+<!-- MathJax enabling -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+<div class="container">
+    
+    
+    <header>
+        <h1 class="site-header">
+            <a href="https:&#x2F;&#x2F;plotsignal.com">Biao J.&#x27;s Online Portfolio</a>
+        </h1>
+        <nav>
+            <ul>
+            
+            
+                
+                <li><a  href="&#x2F;projects&#x2F;">Projects</a></li>
+            
+                
+                <li><a  href="&#x2F;blog&#x2F;">Blog</a></li>
+            
+                
+                <li><a  href="&#x2F;collabs&#x2F;">Collabs</a></li>
+            
+                
+                <li><a  href="&#x2F;about&#x2F;">About</a></li>
+            
+            
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+<article class="post">
+    
+    
+    
+        
+        <header>
+            <h1>5G MIMO algorithm simulations in Rust</h1>
+        </header>
+        
+    <div class="article-info">
+        
+        
+        <div class="article-date">January  6, 2024 ◦ 4 min ◦ </div>
+        
+        <div class="article-taxonomies">
+            
+                <ul class="article-categories">
+                    
+                    <li><a href="https://plotsignal.com/categories/wicomm/">WiComm</a></li>
+                    
+                </ul>
+            
+            
+                <ul class="article-tags">
+                    
+                    <li><a href="https://plotsignal.com/tags/algorithm/">#algorithm</a></li>
+                    
+                    <li><a href="https://plotsignal.com/tags/rust/">#rust</a></li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+    
+    
+    <div class="content">
+        <h2 id="5g-wireless-communication">5G Wireless Communication</h2>
+<h3 id="5g">5G</h3>
+<p>5G, the fifth generation of cellular network technology, is a significant upgrade over its predecessors:</p>
+<ol>
+<li><strong>Super-fast</strong>: Imagine downloading a movie in seconds! 5G boasts significantly faster data speeds compared to 4G, enabling seamless streaming, high-resolution video calls, and near-instantaneous downloads.</li>
+<li><strong>Ultra-low latency</strong>: Think responsive apps and real-time interactions. 5G minimizes the lag between data transmission and response, crucial for applications like self-driving cars, telemedicine, and virtual reality.</li>
+<li><strong>Increased capacity</strong>: More and more devices can connect and share data seamlessly. 5G can handle the ever-growing demand for connectivity from billions of smartphones, connected homes, connected manufacturing equipment, and smart cities.</li>
+<li><strong>Greater reliability</strong>: Say goodbye to dropped calls and unreliable connections. 5G ensures a more stable and dependable network experience even in crowded areas.</li>
+<li><strong>Unlocking new possibilities</strong>: 5G opens doors for innovative applications beyond our current imagination. This includes the Internet of Things (IoT), where everyday objects become connected and communicate with each other, leading to smarter cities, digital industries, and enhanced everyday experiences.</li>
+</ol>
+<h3 id="5g-algorithms">5G algorithms</h3>
+<ol>
+<li>
+<p><strong>Channel Modeling</strong>: Develop a channel model that accurately simulates the characteristics of a 5G MIMO channel, including path loss, fading, and interference. This model will be used to generate realistic channel conditions.</p>
+</li>
+<li>
+<p><strong>MIMO Signal Processing</strong>: Implement key MIMO signal processing techniques, such as beamforming, spatial multiplexing, and diversity combining. These techniques are essential for improving the performance and reliability of MIMO systems.</p>
+</li>
+<li>
+<p><strong>Error Control Coding</strong>: Incorporate error control coding (ECC) schemes, such as turbo codes and LDPC codes, into your simulation. ECC is used to protect data from errors that may occur during transmission over the wireless channel.</p>
+</li>
+<li>
+<p><strong>Modulation and Demodulation</strong>: Implement modulation and demodulation techniques, such as QAM, PAM, and OFDM, to convert digital data into signals that can be transmitted over the wireless channel.</p>
+</li>
+<li>
+<p><strong>Link Adaptation</strong>: Develop link adaptation algorithms that dynamically adjust the modulation scheme, coding rate, and transmit power based on the current channel conditions. This will help to optimize the performance of the MIMO system in different scenarios.</p>
+</li>
+<li>
+<p><strong>Performance Evaluation</strong>: Design metrics and procedures to evaluate the performance of the MIMO configuration. This may include measuring parameters such as throughput, bit error rate (BER), and spectral efficiency.</p>
+</li>
+<li>
+<p><strong>Optimization and Analysis</strong>: Identify the best parameters and settings for specific application.</p>
+</li>
+<li>
+<p><strong>Visualization</strong>: Develop visualization tools to help you visualize the behavior of your MIMO simulation. This can be useful for understanding the dynamics of the system and identifying potential problems.</p>
+</li>
+<li>
+<p><strong>Extend to Multiple Antennas</strong>: Massive MIMO systems.</p>
+</li>
+<li>
+<p><strong>Simulate Different Scenarios</strong>: Different antenna configurations, different propagation environments, and different traffic patterns. This will provide a more comprehensive understanding of the performance of MIMO systems in different conditions.</p>
+</li>
+</ol>
+<h2 id="5g-simulations">5G simulations</h2>
+<h3 id="qam-over-awgn-channel">QAM over AWGN channel</h3>
+<!-- templates/shortcodes/imshow.html, show scaled image given width, height, rel, title, op, quality, caption-->
+
+
+
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+<figure>
+    <img src="https:&#x2F;&#x2F;plotsignal.com&#x2F;processed_images&#x2F;awgn_channel_transmission.8bfca562bf51e5f6.png"  alt="QAM over AWGN" title="QAM over AWGN" />
+    <figcaption>QAM transmission over an AWGN channel</figcaption>
+</figure>
+<h3 id="rust-code-of-qam">Rust code of QAM</h3>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">qam</span><span>(</span><span style="color:#bf616a;">num_bits_per_symbol</span><span>: </span><span style="color:#b48ead;">usize</span><span>, </span><span style="color:#bf616a;">normalize</span><span>: </span><span style="color:#b48ead;">bool</span><span>) -&gt; Vec&lt;Complex&lt;</span><span style="color:#b48ead;">f32</span><span>&gt;&gt; {
+</span><span>    </span><span style="color:#65737e;">// Check if num_bits_per_symbol is even and greater than zero
+</span><span>    assert!(
+</span><span>        num_bits_per_symbol % </span><span style="color:#d08770;">2 </span><span>== </span><span style="color:#d08770;">0</span><span>,
+</span><span>        &quot;</span><span style="color:#a3be8c;">num_bits_per_symbol must be a multiple of 2</span><span>&quot;
+</span><span>    );
+</span><span>    assert!(
+</span><span>        num_bits_per_symbol &gt; </span><span style="color:#d08770;">0</span><span>,
+</span><span>        &quot;</span><span style="color:#a3be8c;">num_bits_per_symbol must be greater than zero</span><span>&quot;
+</span><span>    );
+</span><span>
+</span><span>    </span><span style="color:#65737e;">// Build constellation by iterating through all points
+</span><span>    </span><span style="color:#b48ead;">let mut</span><span> c = Vec::with_capacity(</span><span style="color:#d08770;">2</span><span style="color:#b48ead;">usize</span><span>.</span><span style="color:#96b5b4;">pow</span><span>(num_bits_per_symbol as </span><span style="color:#b48ead;">u32</span><span>));
+</span><span>    </span><span style="color:#b48ead;">for</span><span> i in </span><span style="color:#d08770;">0</span><span>..</span><span style="color:#d08770;">2</span><span style="color:#b48ead;">usize</span><span>.</span><span style="color:#96b5b4;">pow</span><span>(num_bits_per_symbol as </span><span style="color:#b48ead;">u32</span><span>) {
+</span><span>        </span><span style="color:#b48ead;">let</span><span> b: Vec&lt;_&gt; = format!(&quot;</span><span style="color:#a3be8c;">{:0width$b}</span><span>&quot;, i, width = num_bits_per_symbol)
+</span><span>            .</span><span style="color:#96b5b4;">chars</span><span>()
+</span><span>            .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">c</span><span>| c.</span><span style="color:#96b5b4;">to_digit</span><span>(</span><span style="color:#d08770;">10</span><span>).</span><span style="color:#96b5b4;">unwrap</span><span>() as </span><span style="color:#b48ead;">i32</span><span>)
+</span><span>            .</span><span style="color:#96b5b4;">collect</span><span>();
+</span><span>
+</span><span>        </span><span style="color:#b48ead;">let</span><span> real_part = </span><span style="color:#96b5b4;">pam_gray</span><span>(
+</span><span>            &amp;b[</span><span style="color:#d08770;">0</span><span>..num_bits_per_symbol]
+</span><span>                .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>                .</span><span style="color:#96b5b4;">cloned</span><span>()
+</span><span>                .</span><span style="color:#96b5b4;">step_by</span><span>(</span><span style="color:#d08770;">2</span><span>)
+</span><span>                .collect::&lt;Vec&lt;_&gt;&gt;(),
+</span><span>        );
+</span><span>        </span><span style="color:#b48ead;">let</span><span> imag_part = </span><span style="color:#96b5b4;">pam_gray</span><span>(
+</span><span>            &amp;b[</span><span style="color:#d08770;">1</span><span>..num_bits_per_symbol]
+</span><span>                .</span><span style="color:#96b5b4;">iter</span><span>()
+</span><span>                .</span><span style="color:#96b5b4;">cloned</span><span>()
+</span><span>                .</span><span style="color:#96b5b4;">step_by</span><span>(</span><span style="color:#d08770;">2</span><span>)
+</span><span>                .collect::&lt;Vec&lt;_&gt;&gt;(),
+</span><span>        );
+</span><span>
+</span><span>        c.</span><span style="color:#96b5b4;">push</span><span>(Complex::new(real_part as </span><span style="color:#b48ead;">f32</span><span>, imag_part as </span><span style="color:#b48ead;">f32</span><span>));
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#b48ead;">if</span><span> normalize {
+</span><span>        </span><span style="color:#65737e;">// Normalize to unit energy
+</span><span>        </span><span style="color:#b48ead;">let</span><span> n = num_bits_per_symbol / </span><span style="color:#d08770;">2</span><span>;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> n1 = n as </span><span style="color:#b48ead;">isize</span><span>;
+</span><span>        </span><span style="color:#b48ead;">let</span><span> qam_var = (</span><span style="color:#d08770;">1</span><span>..=</span><span style="color:#d08770;">2</span><span style="color:#b48ead;">usize</span><span>.</span><span style="color:#96b5b4;">pow</span><span>(n as </span><span style="color:#b48ead;">u32 </span><span>- </span><span style="color:#d08770;">1</span><span>))
+</span><span>            .</span><span style="color:#96b5b4;">map</span><span>(|</span><span style="color:#bf616a;">i</span><span>| (</span><span style="color:#d08770;">2 </span><span>* i - </span><span style="color:#d08770;">1</span><span>).</span><span style="color:#96b5b4;">pow</span><span>(</span><span style="color:#d08770;">2</span><span>))
+</span><span>            .sum::&lt;</span><span style="color:#b48ead;">usize</span><span>&gt;() as </span><span style="color:#b48ead;">f32
+</span><span>            / </span><span style="color:#d08770;">2</span><span style="color:#b48ead;">f32</span><span>.</span><span style="color:#96b5b4;">powi</span><span>((n1 - </span><span style="color:#d08770;">2</span><span>) as </span><span style="color:#b48ead;">i32</span><span>);
+</span><span>        c.</span><span style="color:#96b5b4;">iter_mut</span><span>().</span><span style="color:#96b5b4;">for_each</span><span>(|</span><span style="color:#bf616a;">point</span><span>| *point /= qam_var.</span><span style="color:#96b5b4;">sqrt</span><span>());
+</span><span>    }
+</span><span>
+</span><span>    c
+</span><span>}
+</span><span>
+</span></code></pre>
+<ul>
+<li>PAM gray labelling</li>
+</ul>
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">/// Maps a bit vector to a PAM constellation points with Gray labeling.
+</span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">pam_gray</span><span>(</span><span style="color:#bf616a;">b</span><span>: &amp;[</span><span style="color:#b48ead;">i32</span><span>]) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
+</span><span>    </span><span style="color:#b48ead;">if</span><span> b.</span><span style="color:#96b5b4;">len</span><span>() &gt; </span><span style="color:#d08770;">1 </span><span>{
+</span><span>        </span><span style="color:#b48ead;">return </span><span>(</span><span style="color:#d08770;">1 </span><span>- </span><span style="color:#d08770;">2 </span><span>* b[</span><span style="color:#d08770;">0</span><span>]) * ((</span><span style="color:#d08770;">2_</span><span style="color:#b48ead;">i32</span><span>).</span><span style="color:#96b5b4;">pow</span><span>(b.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">u32 </span><span>- </span><span style="color:#d08770;">1</span><span>) - </span><span style="color:#96b5b4;">pam_gray</span><span>(&amp;b[</span><span style="color:#d08770;">1</span><span>..]));
+</span><span>    }
+</span><span>    </span><span style="color:#d08770;">1 </span><span>- </span><span style="color:#d08770;">2 </span><span>* b[</span><span style="color:#d08770;">0</span><span>]
+</span><span>}
+</span></code></pre>
+<h3 id="pencil2-fast-forward"><strong>✏️</strong>...⏩</h3>
+
+    </div>
+    
+
+    
+</article>
+
+
+    <footer>
+        <p>
+            
+<span class="icon-text">
+  
+
+  
+  <a href="https://twitter.com/biajia" aria-label="Open biajia Twitter" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true" title="Twitter"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https://github.com/biaojiang" aria-label="Open biaojiang GitHub" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-github fa-lg" aria-hidden="true" title="GitHub"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/biaojiang" aria-label="Open biaojiang LinkedIn" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true" title="LinkedIn"></i>
+    </span>
+  </a>
+  
+
+  
+
+  
+
+  
+
+  
+  <a href="mailto:info@plotsignal.com" aria-label="Email info@plotsignal.com" target="_blank">
+    <span class="icon is-large">
+      <i class="far fa-envelope fa-lg" aria-hidden="true" title="email"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https:&#x2F;&#x2F;plotsignal.com/atom.xml" aria-label="Open atom xml feed" target="_blank">
+    <span class="icon is-large">
+      <i class="fas fa-rss fa-lg" aria-hidden="true" title="atom xml feed"></i>
+    </span>
+  </a>
+  
+
+  
+  
+  <a href=https:&#x2F;&#x2F;www.reddit.com&#x2F;user&#x2F;biajia&#x2F; aria-label="Open Reddit" target="_blank">
+    <span class="icon is-large">
+      <i class="fa-brands fa-reddit fa-lg" aria-hidden="true" title=Reddit></i>
+    </span>
+  </a>
+  
+  
+</span>
+
+        </p>
+        <p>
+            
+            
+        </p>
+    </footer>
+</div>
+</body>
+</html>

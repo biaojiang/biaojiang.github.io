@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Biao J.&#x27;s Online Portfolio - data-science</title>
+    <subtitle>Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://plotsignal.com/tags/data-science/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://plotsignal.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2018-07-17T10:56:00+00:00</updated>
+    <id>https://plotsignal.com/tags/data-science/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Machine learning and AI frameworks and resources</title>
+        <published>2018-07-17T10:56:00+00:00</published>
+        <updated>2018-07-17T10:56:00+00:00</updated>
+        
+        <author>
+          <name>
+            Biao Jiang
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://plotsignal.com/blog/machine-learning-and-ai-resources/"/>
+        <id>https://plotsignal.com/blog/machine-learning-and-ai-resources/</id>
+        
+        <content type="html" xml:base="https://plotsignal.com/blog/machine-learning-and-ai-resources/">&lt;h2 id=&quot;ml-ai-frameworks&quot;&gt;ML&#x2F;AI Frameworks&lt;a class=&quot;zola-anchor&quot; href=&quot;#ml-ai-frameworks&quot; aria-label=&quot;Anchor link for: ml-ai-frameworks&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;python-ml-ai-frameworks&quot;&gt;Python ML&#x2F;AI frameworks&lt;a class=&quot;zola-anchor&quot; href=&quot;#python-ml-ai-frameworks&quot; aria-label=&quot;Anchor link for: python-ml-ai-frameworks&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.tensorflow.org&quot;&gt;TensorFlow&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;TensorFlow was developed by Google Brain team AI researchers and engineers, supporting CPUs, GPUs, TPUs. Google&#x27;s proprietary TPU is the future AI computing platform. So, for long-term considerations, TensorFlow is the best choice for ML and DL.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;pytorch.orgturi&quot;&gt;PyTorch&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Being supported by Facebook, PyTorch has good compatibility with Numpy, and it provides strong tensor computations and dynamic neural networks in Python with strong GPU accelerations.&lt;&#x2F;p&gt;
+&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Feature&lt;&#x2F;th&gt;&lt;th&gt;TensorFlow&lt;&#x2F;th&gt;&lt;th&gt;PyTorch&lt;&#x2F;th&gt;&lt;&#x2F;tr&gt;&lt;&#x2F;thead&gt;&lt;tbody&gt;
+&lt;tr&gt;&lt;td&gt;Learning Curve&lt;&#x2F;td&gt;&lt;td&gt;🚀 More difficult&lt;&#x2F;td&gt;&lt;td&gt;🚀 Easier&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Performance&lt;&#x2F;td&gt;&lt;td&gt;⚡ More performant&lt;&#x2F;td&gt;&lt;td&gt;⚡ Less performant&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Expressiveness&lt;&#x2F;td&gt;&lt;td&gt;💨 Less expressive&lt;&#x2F;td&gt;&lt;td&gt;💨 More expressive&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Deployment&lt;&#x2F;td&gt;&lt;td&gt;💪 Better for production&lt;&#x2F;td&gt;&lt;td&gt;🤼 Good for research and development&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Community&lt;&#x2F;td&gt;&lt;td&gt;👥 Larger and more active&lt;&#x2F;td&gt;&lt;td&gt;👨‍💻 Smaller and growing&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;tr&gt;&lt;td&gt;Use Cases&lt;&#x2F;td&gt;&lt;td&gt;🏭 Production-oriented&lt;&#x2F;td&gt;&lt;td&gt;👩‍🔬 Research and development&lt;&#x2F;td&gt;&lt;&#x2F;tr&gt;
+&lt;&#x2F;tbody&gt;&lt;&#x2F;table&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;flax.readthedocs.io&#x2F;en&#x2F;latest&#x2F;&quot;&gt;Flax&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;flax.readthedocs.io&#x2F;en&#x2F;latest&#x2F;&quot;&gt;Flax&lt;&#x2F;a&gt; is a neural network library built on top of &lt;a href=&quot;https:&#x2F;&#x2F;jax.readthedocs.io&#x2F;en&#x2F;latest&#x2F;&quot;&gt;JAX&lt;&#x2F;a&gt;, which is a high-performance Python library designed for numerical computation and machine learning with features:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;Automatic differentiation: Simplifies calculating gradients, crucial for training neural networks.&lt;&#x2F;li&gt;
+&lt;li&gt;Vectorization: Speeds up computations by operating on entire arrays at once.&lt;&#x2F;li&gt;
+&lt;li&gt;Just-In-Time (JIT) compilation: Optimizes code for specific hardware, leading to significant performance gains.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;So, &lt;a href=&quot;https:&#x2F;&#x2F;jax.readthedocs.io&#x2F;en&#x2F;latest&#x2F;&quot;&gt;JAX&lt;&#x2F;a&gt;&#x27;s JIT compilation and &lt;a href=&quot;https:&#x2F;&#x2F;flax.readthedocs.io&#x2F;en&#x2F;latest&#x2F;&quot;&gt;Flax&lt;&#x2F;a&gt;&#x27;s efficient use of &lt;a href=&quot;https:&#x2F;&#x2F;jax.readthedocs.io&#x2F;en&#x2F;latest&#x2F;&quot;&gt;JAX&lt;&#x2F;a&gt; lead to fast training times. The cons is that both of these are less mature ecosystems, but it is worth exploring.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;golang-ml-frameworks&quot;&gt;Golang ML frameworks&lt;a class=&quot;zola-anchor&quot; href=&quot;#golang-ml-frameworks&quot; aria-label=&quot;Anchor link for: golang-ml-frameworks&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.mlpack.org&#x2F;&quot;&gt;mlpack&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It is a fast, lightweight header-only C++ machine learning library that aims to provide fast, extensible implementations of cutting-edge machine learning algorithms. It depends only on the &lt;strong&gt;Armadillo&lt;&#x2F;strong&gt; linear algebra library and the &lt;strong&gt;cereal&lt;&#x2F;strong&gt; serialization library.&lt;&#x2F;p&gt;
+&lt;p&gt;It has Golang, Python, R and Julia bindings, it is a good choice for data scientists who need to deploy machine learning models to production.&lt;&#x2F;p&gt;
+&lt;p&gt;One test case is &lt;a href=&quot;https:&#x2F;&#x2F;plotsignal.com&#x2F;data-science&#x2F;2022&#x2F;12&#x2F;27&#x2F;plotlib-in-go.html&quot;&gt;Iris dataset classification and visualization&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;rust-ml-frameworks&quot;&gt;Rust ML frameworks&lt;a class=&quot;zola-anchor&quot; href=&quot;#rust-ml-frameworks&quot; aria-label=&quot;Anchor link for: rust-ml-frameworks&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;huggingface&#x2F;candle&#x2F;&quot;&gt;Candle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;huggingface&#x2F;candle&#x2F;&quot;&gt;Candle&lt;&#x2F;a&gt; is a minimalist machine learning framework for Rust with a focus on performance (including GPU support) and ease of use. It aims to provide a performant and user-friendly alternative to existing Python-based machine learning frameworks for developers who prefer &lt;strong&gt;Rust&lt;&#x2F;strong&gt;&#x27;s syntax and performance benefits.&lt;&#x2F;p&gt;
+&lt;p&gt;One use case is &lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;biajia&#x2F;status&#x2F;1711375014136529292?s=20&quot;&gt;MINST classification&lt;&#x2F;a&gt;.&lt;&#x2F;p&gt;
+&lt;h3 id=&quot;cloud-ai-platforms&quot;&gt;Cloud AI platforms&lt;a class=&quot;zola-anchor&quot; href=&quot;#cloud-ai-platforms&quot; aria-label=&quot;Anchor link for: cloud-ai-platforms&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;GCP &lt;a href=&quot;https:&#x2F;&#x2F;cloud.google.com&#x2F;vertex-ai&quot;&gt;Vertex AI&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;azure.microsoft.com&#x2F;en-us&#x2F;products&#x2F;machine-learning&quot;&gt;Azure Machine Learning&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;phased-out-frameworks&quot;&gt;Phased out frameworks&lt;a class=&quot;zola-anchor&quot; href=&quot;#phased-out-frameworks&quot; aria-label=&quot;Anchor link for: phased-out-frameworks&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;As the field of ML&#x2F;AI evolves, new techniques and algorithms are being developed all the time. If a framework is not able to keep up with these new developments, it will become less competitive and less useful for solving real-world problems.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apple&#x2F;turicreate&quot;&gt;Turi Create&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Turi Create was sponsored by Apple, if familiar with Mac OS, then Turi Create is much easier to code and export models to CoreML for use in iOS, macOS, watchOS, and tvOS apps. It has been archived since &lt;strong&gt;2020&lt;&#x2F;strong&gt;.&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;apple&#x2F;tensorflow_macos&quot;&gt;tensorflow_macos&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;It was also archived by Apple, it only supports TensorFlow up to v2.5.&lt;&#x2F;p&gt;
+&lt;p&gt;It is important to be aware of the potential &lt;strong&gt;risks&lt;&#x2F;strong&gt; of using a framework that is not actively developed or that is not compatible with the latest versions of the software that you depend on.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;databases-for-training&quot;&gt;Databases for Training&lt;a class=&quot;zola-anchor&quot; href=&quot;#databases-for-training&quot; aria-label=&quot;Anchor link for: databases-for-training&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.kaggle.com&#x2F;datasets&quot;&gt;kaggle&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;archive.ics.uci.edu&#x2F;ml&#x2F;datasets.html&quot;&gt;UCI Machine Learning Repository&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;cloud.google.com&#x2F;bigquery&quot;&gt;BigQuery public database&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;nlp-and-generative-ai-resources&quot;&gt;NLP and Generative AI Resources&lt;a class=&quot;zola-anchor&quot; href=&quot;#nlp-and-generative-ai-resources&quot; aria-label=&quot;Anchor link for: nlp-and-generative-ai-resources&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;openai.com&#x2F;chatgpt&quot;&gt;ChatGPT&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;ai.meta.com&#x2F;llama&#x2F;&quot;&gt;Meta AI Llama 2&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.gemini.com&#x2F;&quot;&gt;Google Gemini&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;bard.google.com&#x2F;&quot;&gt;Google Bard&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;To solve real problems, we must combine using these LLM tools, as each tool has strengths and weaknesses.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;nlp-and-llm-training-and-deployment&quot;&gt;NLP and LLM Training and Deployment&lt;a class=&quot;zola-anchor&quot; href=&quot;#nlp-and-llm-training-and-deployment&quot; aria-label=&quot;Anchor link for: nlp-and-llm-training-and-deployment&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;huggingface.co&#x2F;&quot;&gt;huggingface&lt;&#x2F;a&gt; is to democratize good machine learning. They offer a variety of tools and resources for machine learning, including models, datasets, and spaces, specifically in NLP and LLM re-training and model sharing.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are some of the specific things that Hugging Face does:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Provide a platform for sharing and using machine learning models. This platform, called Transformers Hub, allows developers to upload their models and share them with others. It also makes it easy for users to find and use models that are relevant to their needs.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Develop and maintain a number of open-source machine learning libraries such as Transformers and Datasets.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Host a number of events and workshops about machine learning. These events are a great way for developers to learn about new techniques and tools, and to network with other people in the field.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Overall, Hugging Face is a valuable resource for anyone who is interested in machine learning. They are committed to making machine learning more accessible and easier to use, and they are making a real difference in the field.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;related-paper-searching&quot;&gt;Related Paper Searching&lt;a class=&quot;zola-anchor&quot; href=&quot;#related-paper-searching&quot; aria-label=&quot;Anchor link for: related-paper-searching&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;scholar.google.se&quot;&gt;Google Scholar&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;a href=&quot;https:&#x2F;&#x2F;www.arxiv-sanity.com&quot;&gt;arxiv-sanity&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;impacts-of-ml-ai-on-industry&quot;&gt;Impacts of ML&#x2F;AI on Industry&lt;a class=&quot;zola-anchor&quot; href=&quot;#impacts-of-ml-ai-on-industry&quot; aria-label=&quot;Anchor link for: impacts-of-ml-ai-on-industry&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h2&gt;
+&lt;p&gt;ML and AI are rapidly transforming industries across the globe, bringing about significant changes and impacting various aspects of business operations. From healthcare to finance, manufacturing to retail, the applications of ML&#x2F;AI are becoming increasingly pervasive, driving innovation and enhancing efficiency.&lt;&#x2F;p&gt;
+&lt;p&gt;Here are some specific examples of how ML&#x2F;AI is impacting industries:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Manufacturing:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol&gt;
+&lt;li&gt;Predictive maintenance algorithms for preventing equipment breakdowns&lt;&#x2F;li&gt;
+&lt;li&gt;AI-powered quality control for identifying and resolving defects in real-time&lt;&#x2F;li&gt;
+&lt;li&gt;ML-driven supply chain optimization for reduced costs and improved efficiency&lt;&#x2F;li&gt;
+&lt;li&gt;Shop floor overall equipment effectiveness (OEE) optimization&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Healthcare:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol&gt;
+&lt;li&gt;AI-powered diagnostics for early disease detection&lt;&#x2F;li&gt;
+&lt;li&gt;ML-driven drug discovery for accelerated drug development&lt;&#x2F;li&gt;
+&lt;li&gt;Personalized medicine for tailored treatment plans&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Finance:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol&gt;
+&lt;li&gt;AI-powered trading algorithms for optimized investment decisions&lt;&#x2F;li&gt;
+&lt;li&gt;ML-driven fraud detection for secure financial systems, especially for &lt;em&gt;cryptocurrency&lt;&#x2F;em&gt; blockchain scam detection and tracking&lt;&#x2F;li&gt;
+&lt;li&gt;Smart chatbots for 24&#x2F;7 customer support&lt;&#x2F;li&gt;
+&lt;li&gt;AI-powered credit scoring for informed lending decisions&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;ul&gt;
+&lt;li&gt;Retail:&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;ol&gt;
+&lt;li&gt;AI-powered recommendation engines for personalized product suggestions&lt;&#x2F;li&gt;
+&lt;li&gt;ML-driven demand forecasting for optimized inventory levels&lt;&#x2F;li&gt;
+&lt;li&gt;Chatbots for personalized customer support&lt;&#x2F;li&gt;
+&lt;li&gt;AI-powered pricing strategies for maximizing revenue&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;industrial-insights-on-ml-ai&quot;&gt;Industrial insights on ML&#x2F;AI&lt;a class=&quot;zola-anchor&quot; href=&quot;#industrial-insights-on-ml-ai&quot; aria-label=&quot;Anchor link for: industrial-insights-on-ml-ai&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h3&gt;
+&lt;h4 id=&quot;industrial-careers-in-the-age-of-machine-learning&quot;&gt;&lt;a href=&quot;https:&#x2F;&#x2F;teguar.com&#x2F;industrial-careers-in-the-age-of-machine-learning&#x2F;&quot;&gt;Industrial Careers in the Age of Machine Learning&lt;&#x2F;a&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#industrial-careers-in-the-age-of-machine-learning&quot; aria-label=&quot;Anchor link for: industrial-careers-in-the-age-of-machine-learning&quot;&gt;
+    &lt;svg class=&quot;zola-anchor-link&quot; viewBox=&quot;0 0 16 16&quot; version=&quot;1.1&quot; width=&quot;16&quot; height=&quot;16&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;path fill-rule=&quot;evenodd&quot;
+            d=&quot;M7.775 3.275a.75.75 0 001.06 1.06l1.25-1.25a2 2 0 112.83 2.83l-2.5 2.5a2 2 0 01-2.83 0 .75.75 0 00-1.06 1.06 3.5 3.5 0 004.95 0l2.5-2.5a3.5 3.5 0 00-4.95-4.95l-1.25 1.25zm-4.69 9.64a2 2 0 010-2.83l2.5-2.5a2 2 0 012.83 0 .75.75 0 001.06-1.06 3.5 3.5 0 00-4.95 0l-2.5 2.5a3.5 3.5 0 004.95 4.95l1.25-1.25a.75.75 0 00-1.06-1.06l-1.25 1.25a2 2 0 01-2.83 0z&quot;&gt;
+        &lt;&#x2F;path&gt;
+    &lt;&#x2F;svg&gt;
+&lt;&#x2F;a&gt;
+&lt;&#x2F;h4&gt;
+&lt;p&gt;ML&#x2F;AI can improve our daily life efficiency, e.g., we can use &lt;a href=&quot;https:&#x2F;&#x2F;labs.google.com&#x2F;search?authuser=0&amp;amp;source=srp&amp;amp;is=ag&quot;&gt;Google SGE, generative AI in Search&lt;&#x2F;a&gt; to summarize this article by &lt;a href=&quot;https:&#x2F;&#x2F;teguar.com&#x2F;industrial-careers-in-the-age-of-machine-learning&#x2F;&quot;&gt;TEGUAR&lt;&#x2F;a&gt; as the following:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;This article looks at the impact of machine learning on the industrial sector. It explains the different types of machine learning, including supervised, unsupervised, and reinforcement learning.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Machine learning is already being used in a variety of ways in the industrial sector, including predictive maintenance, predictive quality, and employee training.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;As machine learning becomes more common, it will lead to changes in the types of jobs available and the skills needed to perform them.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
