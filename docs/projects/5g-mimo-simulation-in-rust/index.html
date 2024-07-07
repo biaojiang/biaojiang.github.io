@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer-when-downgrade">
 
-    <title>5G MIMO algorithm simulations in Rust - Biao J.&#x27;s Online Portfolio</title>
-    <meta name="description" content="Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.">
+    <title>5G MIMO Algorithm Simulations in Rust - Biao J.&#x27;s Online Portfolio</title>
+    <meta name="description" content="Hi, I&#x27;m a senior data scientist, researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.">
 
     
     <link rel="stylesheet" href="https://plotsignal.com/base.css">
@@ -24,7 +24,7 @@
     
     <meta property="og:locale" content="en_US">
     
-    <meta property="og:title" content="5G MIMO algorithm simulations in Rust">
+    <meta property="og:title" content="5G MIMO Algorithm Simulations in Rust">
     
     <meta property="og:type" content="article">
     <meta property="article:author" content="https://plotsignal.com/about/">
@@ -103,7 +103,7 @@ MathJax = {
     
         
         <header>
-            <h1>5G MIMO algorithm simulations in Rust</h1>
+            <h1>5G MIMO Algorithm Simulations in Rust</h1>
         </header>
         
     <div class="article-info">
@@ -138,8 +138,8 @@ MathJax = {
 <h3 id="5g">5G</h3>
 <p>5G, the fifth generation of cellular network technology, is a significant upgrade over its predecessors:</p>
 <ol>
-<li><strong>Super-fast</strong>: Imagine downloading a movie in seconds! 5G boasts significantly faster data speeds compared to 4G, enabling seamless streaming, high-resolution video calls, and near-instantaneous downloads.</li>
-<li><strong>Ultra-low latency</strong>: Think responsive apps and real-time interactions. 5G minimizes the lag between data transmission and response, crucial for applications like self-driving cars, telemedicine, and virtual reality.</li>
+<li><strong>Super-fast</strong>: Imagine downloading a movie in seconds! 5G boasts significantly faster data speeds than 4G, enabling seamless streaming, high-resolution video calls, and near-instantaneous downloads.</li>
+<li><strong>Ultra-low latency</strong>: Think responsive apps and real-time interactions. 5G minimizes the lag between data transmission and response, which is crucial for applications like self-driving cars, telemedicine, and virtual reality.</li>
 <li><strong>Increased capacity</strong>: More and more devices can connect and share data seamlessly. 5G can handle the ever-growing demand for connectivity from billions of smartphones, connected homes, connected manufacturing equipment, and smart cities.</li>
 <li><strong>Greater reliability</strong>: Say goodbye to dropped calls and unreliable connections. 5G ensures a more stable and dependable network experience even in crowded areas.</li>
 <li><strong>Unlocking new possibilities</strong>: 5G opens doors for innovative applications beyond our current imagination. This includes the Internet of Things (IoT), where everyday objects become connected and communicate with each other, leading to smarter cities, digital industries, and enhanced everyday experiences.</li>
@@ -153,7 +153,7 @@ MathJax = {
 <p><strong>MIMO Signal Processing</strong>: Implement key MIMO signal processing techniques, such as beamforming, spatial multiplexing, and diversity combining. These techniques are essential for improving the performance and reliability of MIMO systems.</p>
 </li>
 <li>
-<p><strong>Error Control Coding</strong>: Incorporate error control coding (ECC) schemes, such as turbo codes and LDPC codes, into your simulation. ECC is used to protect data from errors that may occur during transmission over the wireless channel.</p>
+<p><strong>Error Control Coding</strong>: Incorporate error control coding (ECC) schemes, such as turbo codes and LDPC codes, into your simulation. ECC protects data from errors that may occur during transmission over the wireless channel.</p>
 </li>
 <li>
 <p><strong>Modulation and Demodulation</strong>: Implement modulation and demodulation techniques, such as QAM, PAM, and OFDM, to convert digital data into signals that can be transmitted over the wireless channel.</p>
@@ -165,16 +165,16 @@ MathJax = {
 <p><strong>Performance Evaluation</strong>: Design metrics and procedures to evaluate the performance of the MIMO configuration. This may include measuring parameters such as throughput, bit error rate (BER), and spectral efficiency.</p>
 </li>
 <li>
-<p><strong>Optimization and Analysis</strong>: Identify the best parameters and settings for specific application.</p>
+<p><strong>Optimization and Analysis</strong>: Identify the best parameters and settings for specific applications.</p>
 </li>
 <li>
-<p><strong>Visualization</strong>: Develop visualization tools to help you visualize the behavior of your MIMO simulation. This can be useful for understanding the dynamics of the system and identifying potential problems.</p>
+<p><strong>Visualization</strong>: Develop visualization tools to help you visualize the behavior of your MIMO simulation. This can be useful for understanding the system's dynamics and identifying potential problems.</p>
 </li>
 <li>
 <p><strong>Extend to Multiple Antennas</strong>: Massive MIMO systems.</p>
 </li>
 <li>
-<p><strong>Simulate Different Scenarios</strong>: Different antenna configurations, different propagation environments, and different traffic patterns. This will provide a more comprehensive understanding of the performance of MIMO systems in different conditions.</p>
+<p><strong>Simulate Different Scenarios</strong>: Different antenna configurations, propagation environments, and traffic patterns will provide a more comprehensive understanding of the performance of MIMO systems in different conditions.</p>
 </li>
 </ol>
 <h2 id="5g-simulations">5G simulations</h2>
@@ -262,9 +262,9 @@ MathJax = {
 </span><span>
 </span></code></pre>
 <ul>
-<li>PAM gray labelling</li>
+<li>PAM gray labeling</li>
 </ul>
-<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">/// Maps a bit vector to a PAM constellation points with Gray labeling.
+<pre data-lang="rust" style="background-color:#2b303b;color:#c0c5ce;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#65737e;">/// Maps a bit vector to a PAM constellation point with Gray labeling.
 </span><span style="color:#b48ead;">pub fn </span><span style="color:#8fa1b3;">pam_gray</span><span>(</span><span style="color:#bf616a;">b</span><span>: &amp;[</span><span style="color:#b48ead;">i32</span><span>]) -&gt; </span><span style="color:#b48ead;">i32 </span><span>{
 </span><span>    </span><span style="color:#b48ead;">if</span><span> b.</span><span style="color:#96b5b4;">len</span><span>() &gt; </span><span style="color:#d08770;">1 </span><span>{
 </span><span>        </span><span style="color:#b48ead;">return </span><span>(</span><span style="color:#d08770;">1 </span><span>- </span><span style="color:#d08770;">2 </span><span>* b[</span><span style="color:#d08770;">0</span><span>]) * ((</span><span style="color:#d08770;">2_</span><span style="color:#b48ead;">i32</span><span>).</span><span style="color:#96b5b4;">pow</span><span>(b.</span><span style="color:#96b5b4;">len</span><span>() as </span><span style="color:#b48ead;">u32 </span><span>- </span><span style="color:#d08770;">1</span><span>) - </span><span style="color:#96b5b4;">pam_gray</span><span>(&amp;b[</span><span style="color:#d08770;">1</span><span>..]));
@@ -333,14 +333,6 @@ MathJax = {
   </a>
   
 
-  
-  
-  <a href=https:&#x2F;&#x2F;www.reddit.com&#x2F;user&#x2F;biajia&#x2F; aria-label="Open Reddit" target="_blank">
-    <span class="icon is-large">
-      <i class="fa-brands fa-reddit fa-lg" aria-hidden="true" title=Reddit></i>
-    </span>
-  </a>
-  
   
 </span>
 

@@ -7,7 +7,7 @@
     <meta name="referrer" content="no-referrer-when-downgrade">
 
     <title>Implementing the Zoom FFT mixer approach in Python - Biao J.&#x27;s Online Portfolio</title>
-    <meta name="description" content="Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.">
+    <meta name="description" content="Hi, I&#x27;m a senior data scientist, researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.">
 
     
     <link rel="stylesheet" href="https://plotsignal.com/base.css">
@@ -131,12 +131,12 @@ MathJax = {
     
     <div class="content">
         <h2 id="zoom-fft">Zoom FFT</h2>
-<p><a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a> was used to analyze a frequency subband. The idea behind zoom FFT is to retain the same resolution, which could be achieved with a full-size FFT on the original signal, by computing a small-size FFT on a down-sampled shorter signal. Thus, the FFT efficient could be improved while maintaining the same resolution.</p>
+<p><a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a> was used to analyze a frequency subband. The idea behind zoom FFT is to retain the exact resolution, which could be achieved with a full-size FFT on the original signal, by computing a small-size FFT on a down-sampled shorter signal. Thus, the efficiency of FFT could be improved while maintaining the exact resolution.</p>
 <p>This is intuitive: for a decimation factor of $D$, the new sampling rate is $f_{sd} = f_s/D$, and the new frame size (and FFT length) is $L_d = L/D$, so the resolution of the decimated signal is $f_{sd}/L_d = f_s/L$.</p>
 <h2 id="implementation">Implementation</h2>
 <h3 id="the-mixer-approach">The Mixer Approach</h3>
-<p>See <a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a>: The popular mixer Zoom FFT method consists of first shifting the band of interest down to DC using a mixer, and then performing lowpass filtering and decimation by a factor of BWFactor (using an efficient polyphase FIR decimation structure).</p>
-<p><strong>Note:</strong> For short signal, the polyphase FIR designing is tricky, sometimes it will distort the spectrum, as in the Matlab example, the transient filtering effects were eliminated by repeating 10 times of filtering. So the conventional Fourier resampling method is recommended here.</p>
+<p>See <a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a>: The popular mixer Zoom FFT method consists of first shifting the band of interest down to DC using a mixer and then performing lowpass filtering and decimation by a factor of BWFactor (using an efficient polyphase FIR decimation structure).</p>
+<p><strong>Note:</strong> For short signals, the polyphase FIR design is tricky. Sometimes, it will distort the spectrum. In the Matlab example, the transient filtering effects were eliminated by repeating the filtering ten times. So, the conventional Fourier resampling method is recommended here.</p>
 <h3 id="python-codes">Python Codes</h3>
 <ul>
 <li>Import modules</li>
@@ -178,13 +178,13 @@ MathJax = {
 </span><span>ax1[</span><span style="color:#d08770;">0</span><span>].</span><span style="color:#bf616a;">grid</span><span>()
 </span></code></pre>
 <ul>
-<li>Zoom FFT using mixer approach</li>
+<li>Zoom FFT using a mixer approach</li>
 </ul>
 <pre data-lang="python" style="background-color:#2b303b;color:#c0c5ce;" class="language-python "><code class="language-python" data-lang="python"><span>BWOfInterest = </span><span style="color:#d08770;">48 </span><span>- </span><span style="color:#d08770;">16
 </span><span>Fc = (</span><span style="color:#d08770;">16 </span><span>+ </span><span style="color:#d08770;">48</span><span>) / </span><span style="color:#d08770;">2
 </span><span>BWFactor = np.</span><span style="color:#bf616a;">floor</span><span>(fs / BWOfInterest).</span><span style="color:#bf616a;">astype</span><span>(np.uint8)
 </span><span>
-</span><span style="color:#65737e;"># mix the signal down to DC, and filter it through the FIR decimator
+</span><span style="color:#65737e;"># mix the signal down to DC and filter it through the FIR decimator
 </span><span>indVect = np.</span><span style="color:#bf616a;">arange</span><span>(L)
 </span><span>y = x * np.</span><span style="color:#bf616a;">exp</span><span>(-</span><span style="color:#d08770;">1</span><span style="color:#b48ead;">j </span><span>* </span><span style="color:#d08770;">2 </span><span>* pi * indVect * Fc / fs)
 </span><span>xd = signal.</span><span style="color:#bf616a;">resample</span><span>(y, </span><span style="color:#d08770;">8</span><span>)
@@ -209,7 +209,7 @@ MathJax = {
 </span><span>fig1.</span><span style="color:#bf616a;">subplots_adjust</span><span>(</span><span style="color:#bf616a;">hspace</span><span>=</span><span style="color:#d08770;">0.35</span><span>)
 </span></code></pre>
 <h3 id="result">Result</h3>
-<p>The following result is the same as in <a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a>, but much faster.</p>
+<p>The following result is the same as in <a href="https://se.mathworks.com/help/dsp/examples/zoom-fft.html">Zoom FFT</a> but much faster.</p>
 <!-- templates/shortcodes/imshow_rel.html, show relative scaled image -->
 
     
@@ -290,14 +290,6 @@ MathJax = {
   </a>
   
 
-  
-  
-  <a href=https:&#x2F;&#x2F;www.reddit.com&#x2F;user&#x2F;biajia&#x2F; aria-label="Open Reddit" target="_blank">
-    <span class="icon is-large">
-      <i class="fa-brands fa-reddit fa-lg" aria-hidden="true" title=Reddit></i>
-    </span>
-  </a>
-  
   
 </span>
 

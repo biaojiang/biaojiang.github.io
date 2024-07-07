@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Biao J.&#x27;s Online Portfolio - DSP</title>
-    <subtitle>Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
+    <subtitle>Hi, I&#x27;m a senior data scientist, researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
     <link rel="self" type="application/atom+xml" href="https://plotsignal.com/categories/dsp/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://plotsignal.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
@@ -22,12 +22,12 @@
         <id>https://plotsignal.com/projects/zoom-fft/</id>
         
         <content type="html" xml:base="https://plotsignal.com/projects/zoom-fft/">&lt;h2 id=&quot;zoom-fft&quot;&gt;Zoom FFT&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;se.mathworks.com&#x2F;help&#x2F;dsp&#x2F;examples&#x2F;zoom-fft.html&quot;&gt;Zoom FFT&lt;&#x2F;a&gt; was used to analyze a frequency subband. The idea behind zoom FFT is to retain the same resolution, which could be achieved with a full-size FFT on the original signal, by computing a small-size FFT on a down-sampled shorter signal. Thus, the FFT efficient could be improved while maintaining the same resolution.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;se.mathworks.com&#x2F;help&#x2F;dsp&#x2F;examples&#x2F;zoom-fft.html&quot;&gt;Zoom FFT&lt;&#x2F;a&gt; was used to analyze a frequency subband. The idea behind zoom FFT is to retain the exact resolution, which could be achieved with a full-size FFT on the original signal, by computing a small-size FFT on a down-sampled shorter signal. Thus, the efficiency of FFT could be improved while maintaining the exact resolution.&lt;&#x2F;p&gt;
 &lt;p&gt;This is intuitive: for a decimation factor of $D$, the new sampling rate is $f_{sd} = f_s&#x2F;D$, and the new frame size (and FFT length) is $L_d = L&#x2F;D$, so the resolution of the decimated signal is $f_{sd}&#x2F;L_d = f_s&#x2F;L$.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;implementation&quot;&gt;Implementation&lt;&#x2F;h2&gt;
 &lt;h3 id=&quot;the-mixer-approach&quot;&gt;The Mixer Approach&lt;&#x2F;h3&gt;
-&lt;p&gt;See &lt;a href=&quot;https:&#x2F;&#x2F;se.mathworks.com&#x2F;help&#x2F;dsp&#x2F;examples&#x2F;zoom-fft.html&quot;&gt;Zoom FFT&lt;&#x2F;a&gt;: The popular mixer Zoom FFT method consists of first shifting the band of interest down to DC using a mixer, and then performing lowpass filtering and decimation by a factor of BWFactor (using an efficient polyphase FIR decimation structure).&lt;&#x2F;p&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;&#x2F;strong&gt; For short signal, the polyphase FIR designing is tricky, sometimes it will distort the spectrum, as in the Matlab example, the transient filtering effects were eliminated by repeating 10 times of filtering. So the conventional Fourier resampling method is recommended here.&lt;&#x2F;p&gt;
+&lt;p&gt;See &lt;a href=&quot;https:&#x2F;&#x2F;se.mathworks.com&#x2F;help&#x2F;dsp&#x2F;examples&#x2F;zoom-fft.html&quot;&gt;Zoom FFT&lt;&#x2F;a&gt;: The popular mixer Zoom FFT method consists of first shifting the band of interest down to DC using a mixer and then performing lowpass filtering and decimation by a factor of BWFactor (using an efficient polyphase FIR decimation structure).&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;&#x2F;strong&gt; For short signals, the polyphase FIR design is tricky. Sometimes, it will distort the spectrum. In the Matlab example, the transient filtering effects were eliminated by repeating the filtering ten times. So, the conventional Fourier resampling method is recommended here.&lt;&#x2F;p&gt;
 &lt;h3 id=&quot;python-codes&quot;&gt;Python Codes&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Import modules&lt;&#x2F;li&gt;
@@ -69,13 +69,13 @@
 &lt;&#x2F;span&gt;&lt;span&gt;ax1[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;].&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;grid&lt;&#x2F;span&gt;&lt;span&gt;()
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;ul&gt;
-&lt;li&gt;Zoom FFT using mixer approach&lt;&#x2F;li&gt;
+&lt;li&gt;Zoom FFT using a mixer approach&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
 &lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span&gt;BWOfInterest = &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;48 &lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;16
 &lt;&#x2F;span&gt;&lt;span&gt;Fc = (&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;16 &lt;&#x2F;span&gt;&lt;span&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;48&lt;&#x2F;span&gt;&lt;span&gt;) &#x2F; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2
 &lt;&#x2F;span&gt;&lt;span&gt;BWFactor = np.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;floor&lt;&#x2F;span&gt;&lt;span&gt;(fs &#x2F; BWOfInterest).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;astype&lt;&#x2F;span&gt;&lt;span&gt;(np.uint8)
 &lt;&#x2F;span&gt;&lt;span&gt;
-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# mix the signal down to DC, and filter it through the FIR decimator
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;# mix the signal down to DC and filter it through the FIR decimator
 &lt;&#x2F;span&gt;&lt;span&gt;indVect = np.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;arange&lt;&#x2F;span&gt;&lt;span&gt;(L)
 &lt;&#x2F;span&gt;&lt;span&gt;y = x * np.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;exp&lt;&#x2F;span&gt;&lt;span&gt;(-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;j &lt;&#x2F;span&gt;&lt;span&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;* pi * indVect * Fc &#x2F; fs)
 &lt;&#x2F;span&gt;&lt;span&gt;xd = signal.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;resample&lt;&#x2F;span&gt;&lt;span&gt;(y, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;8&lt;&#x2F;span&gt;&lt;span&gt;)
@@ -100,7 +100,7 @@
 &lt;&#x2F;span&gt;&lt;span&gt;fig1.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;subplots_adjust&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;hspace&lt;&#x2F;span&gt;&lt;span&gt;=&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0.35&lt;&#x2F;span&gt;&lt;span&gt;)
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;h3 id=&quot;result&quot;&gt;Result&lt;&#x2F;h3&gt;
-&lt;p&gt;The following result is the same as in &lt;a href=&quot;https:&#x2F;&#x2F;se.mathworks.com&#x2F;help&#x2F;dsp&#x2F;examples&#x2F;zoom-fft.html&quot;&gt;Zoom FFT&lt;&#x2F;a&gt;, but much faster.&lt;&#x2F;p&gt;
+&lt;p&gt;The following result is the same as in &lt;a href=&quot;https:&#x2F;&#x2F;se.mathworks.com&#x2F;help&#x2F;dsp&#x2F;examples&#x2F;zoom-fft.html&quot;&gt;Zoom FFT&lt;&#x2F;a&gt; but much faster.&lt;&#x2F;p&gt;
 &lt;!-- templates&#x2F;shortcodes&#x2F;imshow_rel.html, show relative scaled image --&gt;
 
     

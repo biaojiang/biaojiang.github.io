@@ -1,14 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Biao J.&#x27;s Online Portfolio - algorithm</title>
-    <subtitle>Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
+    <subtitle>Hi, I&#x27;m a senior data scientist, researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
     <link rel="self" type="application/atom+xml" href="https://plotsignal.com/tags/algorithm/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://plotsignal.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
-    <updated>2024-01-06T14:58:00+00:00</updated>
+    <updated>2024-02-12T08:00:00+00:00</updated>
     <id>https://plotsignal.com/tags/algorithm/atom.xml</id>
     <entry xml:lang="en">
-        <title>5G MIMO algorithm simulations in Rust</title>
+        <title>Comprehensive Solutions to LeetCode and HackerRank Challenges in Rust, Go, and Python</title>
+        <published>2024-02-12T08:00:00+00:00</published>
+        <updated>2024-02-12T08:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            Biao Jiang
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://plotsignal.com/projects/algorithms/"/>
+        <id>https://plotsignal.com/projects/algorithms/</id>
+        
+        <content type="html" xml:base="https://plotsignal.com/projects/algorithms/">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;&#x2F;h2&gt;
+&lt;p&gt;LeetCode and HackerRank are popular platforms for practicing coding and improving problem-solving skills. To assist developers in mastering these platforms, we have developed a comprehensive repository containing solutions to various algorithms and challenges implemented in Rust, Go, and Python. This repository serves as an excellent resource for learning and reference.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-problem&quot;&gt;The Problem&lt;&#x2F;h2&gt;
+&lt;p&gt;Many developers face challenges when learning new programming languages or tackling complex problems on platforms like LeetCode and HackerRank. Common issues include:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Language Proficiency&lt;&#x2F;strong&gt;: Difficulty understanding and implementing solutions in different programming languages.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Algorithmic Complexity&lt;&#x2F;strong&gt;: Struggles with grasping the concepts behind algorithms and their implementations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Lack of Resources&lt;&#x2F;strong&gt;: Limited access to well-documented and diverse solution examples for the same problem in multiple languages.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;the-solution&quot;&gt;The Solution&lt;&#x2F;h2&gt;
+&lt;p&gt;To address these issues, we created a GitHub repository named &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;biaojiang&#x2F;leetcode&quot;&gt;leetcode&lt;&#x2F;a&gt; that contains solutions to a wide range of LeetCode and HackerRank problems implemented in Rust, Go, and Python. This repository is designed to help keep continuous learning and improvement:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Improve Multi-language Proficiency&lt;&#x2F;strong&gt;: Learn to solve the same problem using different programming languages.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Understand Algorithms&lt;&#x2F;strong&gt;: Gain insights into various algorithms and their implementations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Access Quality Resources&lt;&#x2F;strong&gt;: Utilize well-documented code examples for study and reference.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;repository-highlights&quot;&gt;Repository Highlights&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;code&gt;leetcode&lt;&#x2F;code&gt; repository includes:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Diverse Problem Set&lt;&#x2F;strong&gt;: Solutions to many problems from LeetCode and HackerRank.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Multi-language Implementations&lt;&#x2F;strong&gt;: Each problem is solved in Rust, Go, and Python, providing a comprehensive learning experience.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Well-documented Code&lt;&#x2F;strong&gt;: Clear and concise documentation to help understand the implementation and logic behind each solution.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h3 id=&quot;languages-covered&quot;&gt;Languages Covered&lt;&#x2F;h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rust&lt;&#x2F;strong&gt;: Known for its performance and safety, Rust is an excellent language for systems programming and handling concurrency.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Go&lt;&#x2F;strong&gt;: With its simplicity and efficiency, Go is ideal for developing scalable and concurrent applications.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Python&lt;&#x2F;strong&gt;: A versatile language with simple syntax, Python is widely used for web development, data analysis, artificial intelligence, and more.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;usage&quot;&gt;Usage&lt;&#x2F;h2&gt;
+&lt;p&gt;To start, visit the &lt;a href=&quot;https:&#x2F;&#x2F;plotsignal.com&#x2F;leetcode&#x2F;leetcode&quot;&gt;mdBook for LeetCode&#x2F;HackerRank solutions&lt;&#x2F;a&gt;. This book provides a structured and easy-to-navigate format for exploring Rust, Go, and Python solutions.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;The &lt;code&gt;leetcode&lt;&#x2F;code&gt; repository is an invaluable resource for developers looking to enhance their coding skills across multiple languages. Whether you are preparing for technical interviews or simply aiming to improve your algorithmic knowledge, this repository provides a wealth of examples and insights.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>5G MIMO Algorithm Simulations in Rust</title>
         <published>2024-01-06T14:58:00+00:00</published>
         <updated>2024-01-06T14:58:00+00:00</updated>
         
@@ -25,8 +75,8 @@
 &lt;h3 id=&quot;5g&quot;&gt;5G&lt;&#x2F;h3&gt;
 &lt;p&gt;5G, the fifth generation of cellular network technology, is a significant upgrade over its predecessors:&lt;&#x2F;p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Super-fast&lt;&#x2F;strong&gt;: Imagine downloading a movie in seconds! 5G boasts significantly faster data speeds compared to 4G, enabling seamless streaming, high-resolution video calls, and near-instantaneous downloads.&lt;&#x2F;li&gt;
-&lt;li&gt;&lt;strong&gt;Ultra-low latency&lt;&#x2F;strong&gt;: Think responsive apps and real-time interactions. 5G minimizes the lag between data transmission and response, crucial for applications like self-driving cars, telemedicine, and virtual reality.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Super-fast&lt;&#x2F;strong&gt;: Imagine downloading a movie in seconds! 5G boasts significantly faster data speeds than 4G, enabling seamless streaming, high-resolution video calls, and near-instantaneous downloads.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ultra-low latency&lt;&#x2F;strong&gt;: Think responsive apps and real-time interactions. 5G minimizes the lag between data transmission and response, which is crucial for applications like self-driving cars, telemedicine, and virtual reality.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Increased capacity&lt;&#x2F;strong&gt;: More and more devices can connect and share data seamlessly. 5G can handle the ever-growing demand for connectivity from billions of smartphones, connected homes, connected manufacturing equipment, and smart cities.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Greater reliability&lt;&#x2F;strong&gt;: Say goodbye to dropped calls and unreliable connections. 5G ensures a more stable and dependable network experience even in crowded areas.&lt;&#x2F;li&gt;
 &lt;li&gt;&lt;strong&gt;Unlocking new possibilities&lt;&#x2F;strong&gt;: 5G opens doors for innovative applications beyond our current imagination. This includes the Internet of Things (IoT), where everyday objects become connected and communicate with each other, leading to smarter cities, digital industries, and enhanced everyday experiences.&lt;&#x2F;li&gt;
@@ -40,7 +90,7 @@
 &lt;p&gt;&lt;strong&gt;MIMO Signal Processing&lt;&#x2F;strong&gt;: Implement key MIMO signal processing techniques, such as beamforming, spatial multiplexing, and diversity combining. These techniques are essential for improving the performance and reliability of MIMO systems.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Error Control Coding&lt;&#x2F;strong&gt;: Incorporate error control coding (ECC) schemes, such as turbo codes and LDPC codes, into your simulation. ECC is used to protect data from errors that may occur during transmission over the wireless channel.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Error Control Coding&lt;&#x2F;strong&gt;: Incorporate error control coding (ECC) schemes, such as turbo codes and LDPC codes, into your simulation. ECC protects data from errors that may occur during transmission over the wireless channel.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Modulation and Demodulation&lt;&#x2F;strong&gt;: Implement modulation and demodulation techniques, such as QAM, PAM, and OFDM, to convert digital data into signals that can be transmitted over the wireless channel.&lt;&#x2F;p&gt;
@@ -52,16 +102,16 @@
 &lt;p&gt;&lt;strong&gt;Performance Evaluation&lt;&#x2F;strong&gt;: Design metrics and procedures to evaluate the performance of the MIMO configuration. This may include measuring parameters such as throughput, bit error rate (BER), and spectral efficiency.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Optimization and Analysis&lt;&#x2F;strong&gt;: Identify the best parameters and settings for specific application.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Optimization and Analysis&lt;&#x2F;strong&gt;: Identify the best parameters and settings for specific applications.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Visualization&lt;&#x2F;strong&gt;: Develop visualization tools to help you visualize the behavior of your MIMO simulation. This can be useful for understanding the dynamics of the system and identifying potential problems.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Visualization&lt;&#x2F;strong&gt;: Develop visualization tools to help you visualize the behavior of your MIMO simulation. This can be useful for understanding the system&#x27;s dynamics and identifying potential problems.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;Extend to Multiple Antennas&lt;&#x2F;strong&gt;: Massive MIMO systems.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Simulate Different Scenarios&lt;&#x2F;strong&gt;: Different antenna configurations, different propagation environments, and different traffic patterns. This will provide a more comprehensive understanding of the performance of MIMO systems in different conditions.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Simulate Different Scenarios&lt;&#x2F;strong&gt;: Different antenna configurations, propagation environments, and traffic patterns will provide a more comprehensive understanding of the performance of MIMO systems in different conditions.&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
 &lt;h2 id=&quot;5g-simulations&quot;&gt;5G simulations&lt;&#x2F;h2&gt;
@@ -149,9 +199,9 @@
 &lt;&#x2F;span&gt;&lt;span&gt;
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;ul&gt;
-&lt;li&gt;PAM gray labelling&lt;&#x2F;li&gt;
+&lt;li&gt;PAM gray labeling&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F;&#x2F; Maps a bit vector to a PAM constellation points with Gray labeling.
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2b303b;color:#c0c5ce;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#65737e;&quot;&gt;&#x2F;&#x2F;&#x2F; Maps a bit vector to a PAM constellation point with Gray labeling.
 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;pub fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#8fa1b3;&quot;&gt;pam_gray&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#bf616a;&quot;&gt;b&lt;&#x2F;span&gt;&lt;span&gt;: &amp;amp;[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;]) -&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;{
 &lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;if&lt;&#x2F;span&gt;&lt;span&gt; b.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;() &amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;{
 &lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1 &lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span&gt;* b[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;]) * ((&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;2_&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;).&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;pow&lt;&#x2F;span&gt;&lt;span&gt;(b.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;len&lt;&#x2F;span&gt;&lt;span&gt;() as &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;u32 &lt;&#x2F;span&gt;&lt;span&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;) - &lt;&#x2F;span&gt;&lt;span style=&quot;color:#96b5b4;&quot;&gt;pam_gray&lt;&#x2F;span&gt;&lt;span&gt;(&amp;amp;b[&lt;&#x2F;span&gt;&lt;span style=&quot;color:#d08770;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;..]));

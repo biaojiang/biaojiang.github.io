@@ -11,13 +11,20 @@
     </url>
     <url>
         <loc>https://plotsignal.com/blog/machine-learning-and-ai-resources/</loc>
-        <lastmod>2018-07-17T10:56:00Z</lastmod>
+        <lastmod>2024-04-05T09:00:00Z</lastmod>
     </url>
     <url>
         <loc>https://plotsignal.com/blog/page/1/</loc>
     </url>
     <url>
+        <loc>https://plotsignal.com/blog/timestamp-to-exif/</loc>
+        <lastmod>2024-07-07T08:00:00Z</lastmod>
+    </url>
+    <url>
         <loc>https://plotsignal.com/categories/</loc>
+    </url>
+    <url>
+        <loc>https://plotsignal.com/categories/algorithm/</loc>
     </url>
     <url>
         <loc>https://plotsignal.com/categories/data-science/</loc>
@@ -49,6 +56,10 @@
         <lastmod>2024-01-06T14:58:00Z</lastmod>
     </url>
     <url>
+        <loc>https://plotsignal.com/projects/algorithms/</loc>
+        <lastmod>2024-02-12T08:00:00Z</lastmod>
+    </url>
+    <url>
         <loc>https://plotsignal.com/projects/plotlib-go/</loc>
         <lastmod>2022-12-27T16:30:00Z</lastmod>
     </url>
@@ -73,6 +84,9 @@
     </url>
     <url>
         <loc>https://plotsignal.com/tags/hobby/</loc>
+    </url>
+    <url>
+        <loc>https://plotsignal.com/tags/image/</loc>
     </url>
     <url>
         <loc>https://plotsignal.com/tags/python/</loc>

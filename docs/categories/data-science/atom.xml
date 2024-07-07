@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
     <title>Biao J.&#x27;s Online Portfolio - data-science</title>
-    <subtitle>Hi, I&#x27;m a researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
+    <subtitle>Hi, I&#x27;m a senior data scientist, researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
     <link rel="self" type="application/atom+xml" href="https://plotsignal.com/categories/data-science/atom.xml"/>
     <link rel="alternate" type="text/html" href="https://plotsignal.com"/>
     <generator uri="https://www.getzola.org/">Zola</generator>
@@ -22,10 +22,10 @@
         <id>https://plotsignal.com/projects/plotlib-go/</id>
         
         <content type="html" xml:base="https://plotsignal.com/projects/plotlib-go/">&lt;h2 id=&quot;motivative&quot;&gt;Motivative&lt;&#x2F;h2&gt;
-&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;go.dev&quot;&gt;The Go Programming Language&lt;&#x2F;a&gt; is much faster than Python, and the syntax is in a modern design. I got familiar with Go by implementing the acoustic array beamforming modules. Initially, the results were exported to plot in Python, but it was not convenient. Therefore, finding a way to directly plot the high-quality figures in Go could improve the development efficiency later.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;go.dev&quot;&gt;The Go Programming Language&lt;&#x2F;a&gt; is much faster than Python, and its syntax is modern. I became familiar with Go by implementing the acoustic array beamforming modules. Initially, the results were exported to plot in Python, but it was inconvenient. Therefore, finding a way to directly plot the high-quality figures in Go could improve the development efficiency later.&lt;&#x2F;p&gt;
 &lt;h2 id=&quot;plot-in-go&quot;&gt;Plot in Go&lt;&#x2F;h2&gt;
 &lt;p&gt;The plotlib is developed on the top of &lt;a href=&quot;https:&#x2F;&#x2F;pkg.go.dev&#x2F;gonum.org&#x2F;v1&#x2F;plot&quot;&gt;gonum&#x2F;plot&lt;&#x2F;a&gt;. The &lt;code&gt;marker&lt;&#x2F;code&gt; defined in other plotting libraries, e.g., matplotlib, is named &lt;code&gt;points&lt;&#x2F;code&gt; in gonum. To implement a function similar to &lt;code&gt;imshow,&lt;&#x2F;code&gt; we need to use &lt;code&gt;heatmap.&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;interface-between-the-plotlib-and-the-main-function&quot;&gt;Interface between the plotlib and the main function&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;the-interface-between-the-plotlib-and-the-main-function&quot;&gt;The interface between the plotlib and the main function&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;Line plotting struct&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
