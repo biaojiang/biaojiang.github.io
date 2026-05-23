@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="no-referrer-when-downgrade">
 
-    <title>Biao J.&#x27;s Online Portfolio</title>
+    <title>A Versatile Golang Plotting Library (plotlib-go) Developed - Biao J.&#x27;s Online Portfolio</title>
     <meta name="description" content="Hi, I&#x27;m a senior data scientist, researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.">
 
     
@@ -21,9 +21,25 @@
     
 
     
-    <meta property="og:title" content="Biao J.&#x27;s Online Portfolio">
-    <meta property="og:type" content="website">
     
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="og:title" content="A Versatile Golang Plotting Library (plotlib-go) Developed">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="https://plotsignal.com/about/">
+    <meta property="article:published_time" content="2022-12-27T16:30:00Z">
+    
+    
+    <meta property="article:tag" content="go">
+    
+    
+    
+    
+    <meta property="og:url" content="https://plotsignal.com/projects/plotlib-go/">
+    
+    
+
 
     
 <!-- Google tag (gtag.js) -->
@@ -82,33 +98,104 @@ MathJax = {
     </header>
     
     
+
 <article class="post">
-    <header>
-        <h1>404: Page not found</h1>
-    </header>
-    <div class="content">
-        The thing or page you're looking for cannot be found!
-        Have a 404 derg instead:
+    
+    
+    
+        
+        <header>
+            <h1>
+                A Versatile Golang Plotting Library (plotlib-go) Developed
+                
+            </h1>
+            
+            
+        </header>
+        
+    <div class="article-info">
+        
+        
+        <div class="article-date">December 27, 2022 ◦ 1 min ◦ </div>
+        
+        <div class="article-taxonomies">
+            
+                <ul class="article-categories">
+                    
+                    <li><a href="https://plotsignal.com/categories/data-science/">data-science</a></li>
+                    
+                </ul>
+            
+            
+                <ul class="article-tags">
+                    
+                    <li><a href="https://plotsignal.com/tags/go/">#go</a></li>
+                    
+                </ul>
+            
+        </div>
     </div>
-    <pre>
-                           ^\    ^
-                          / \\  / \
-                         /.  \\/   \      |\___/|
-      *----*           / / |  \\    \  __/  O  O\
-      |   /          /  /  |   \\    \_\/  \     \
-     / /\/         /   /   |    \\   _\/    '@___@
-    /  /         /    /    |     \\ _\/       |U
-    |  |       /     /     |      \\\/        |
-    \  |     /_     /      |       \\  )   \ _|_
-    \   \       ~-./_ _    |    .- ; (  \_ _ _,\'
-    ~    ~.           .-~-.|.-*      _        {-,
-     \      ~-. _ .-~                 \      /\'
-      \                   }    404     {   .*
-       ~.                 '-/        /.-~----.
-         ~- _             /        >..----.\\\
-             ~ - - - - ^}_ _ _ _ _ _ _.-\\\
-    </pre>
+
+    
+    
+    <div class="content">
+        <h2 id="motivative">Motivative</h2>
+<p><a rel="external" href="https://go.dev">The Go Programming Language</a> is much faster than Python, and its syntax is modern. I became familiar with Go by implementing the acoustic array beamforming modules. Initially, the results were exported to plot in Python, but it was inconvenient. Therefore, finding a way to directly plot the high-quality figures in Go could improve the development efficiency later.</p>
+<h2 id="plot-in-go">Plot in Go</h2>
+<p>The plotlib is developed on the top of <a rel="external" href="https://pkg.go.dev/gonum.org/v1/plot">gonum/plot</a>. The <code>marker</code> defined in other plotting libraries, e.g., matplotlib, is named <code>points</code> in gonum. To implement a function similar to <code>imshow,</code> we need to use <code>heatmap.</code></p>
+<h3 id="the-interface-between-the-plotlib-and-the-main-function">The interface between the plotlib and the main function</h3>
+<ul>
+<li>Line plotting struct</li>
+</ul>
+<pre><code data-lang="go">// Line structure
+type Line struct {
+	P         *plot.Plot
+	XYs       []plotter.XYs // XY data
+	Width     float64
+	Height    float64
+	Color     []string
+	Xlabel    string
+	Ylabel    string
+	Title     string
+	Figname   string
+	GridOn    bool
+	PointsOn  []bool // add points/markers
+	LineWidth []float64
+	Ticks     []float64
+	Legend    []string
+	LegendPos struct{ Left, Top bool } // legned position
+}
+</code></pre>
+<ul>
+<li>Plotting</li>
+</ul>
+<pre><code data-lang="go">var plt plotlib.Plt = &amp;line
+plt.AddDataXY(&amp;x_data, &amp;y_data)
+plt.Plot()
+</code></pre>
+<ul>
+<li>Save figure</li>
+</ul>
+<pre><code data-lang="go">plt.SaveFig()
+</code></pre>
+<h3 id="result">Result</h3>
+<ol>
+<li>Line and point/marker plotting</li>
+</ol>
+<p>Narrowband beamforming of a 16-element array was simulated, and the resulting beampatterns for two different windowing functions are compared as follows:</p>
+<p><img src="https://plotsignal.com/projects/plotlib-go/./narrowbeam_win_cmp.svg" alt="narrowband beamforming" title="narrowband beamforming comparing two windows" /></p>
+<ol start="2">
+<li>Scatter plotting
+<a href="https://plotsignal.com/projects/plotlib-go/!https://en.wikipedia.org/wiki/Iris_flower_data_set">Iris flower data set</a> was used to test the Golang machine learning performance. The data feature distribution was visualized with scatter plotting:</li>
+</ol>
+<p><img src="https://plotsignal.com/projects/plotlib-go/./iris_scatter_sepal.svg" alt="iris sepal length vs. width" title="iris_scatter_sepal" /></p>
+
+    </div>
+    
+
+    
 </article>
+
 
     <footer>
         <p>

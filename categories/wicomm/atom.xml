@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>Biao J.&#x27;s Online Portfolio - WiComm</title>
+    <subtitle>Hi, I&#x27;m a senior data scientist, researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://plotsignal.com/categories/wicomm/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://plotsignal.com"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-01-06T14:58:00+00:00</updated>
+    <id>https://plotsignal.com/categories/wicomm/atom.xml</id>
+    <entry xml:lang="en">
+        <title>5G MIMO Algorithm Simulations in Rust</title>
+        <published>2024-01-06T14:58:00+00:00</published>
+        <updated>2024-01-06T14:58:00+00:00</updated>
+        
+        <author>
+          <name>
+            Biao Jiang
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://plotsignal.com/projects/5g-mimo-simulation-in-rust/"/>
+        <id>https://plotsignal.com/projects/5g-mimo-simulation-in-rust/</id>
+        
+        <content type="html" xml:base="https://plotsignal.com/projects/5g-mimo-simulation-in-rust/">&lt;h2 id=&quot;5g-wireless-communication&quot;&gt;5G Wireless Communication&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;5g&quot;&gt;5G&lt;&#x2F;h3&gt;
+&lt;p&gt;5G, the fifth generation of cellular network technology, is a significant upgrade over its predecessors:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Super-fast&lt;&#x2F;strong&gt;: Imagine downloading a movie in seconds! 5G boasts significantly faster data speeds than 4G, enabling seamless streaming, high-resolution video calls, and near-instantaneous downloads.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ultra-low latency&lt;&#x2F;strong&gt;: Think responsive apps and real-time interactions. 5G minimizes the lag between data transmission and response, which is crucial for applications like self-driving cars, telemedicine, and virtual reality.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Increased capacity&lt;&#x2F;strong&gt;: More and more devices can connect and share data seamlessly. 5G can handle the ever-growing demand for connectivity from billions of smartphones, connected homes, connected manufacturing equipment, and smart cities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Greater reliability&lt;&#x2F;strong&gt;: Say goodbye to dropped calls and unreliable connections. 5G ensures a more stable and dependable network experience even in crowded areas.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Unlocking new possibilities&lt;&#x2F;strong&gt;: 5G opens doors for innovative applications beyond our current imagination. This includes the Internet of Things (IoT), where everyday objects become connected and communicate with each other, leading to smarter cities, digital industries, and enhanced everyday experiences.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h3 id=&quot;5g-algorithms&quot;&gt;5G algorithms&lt;&#x2F;h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Channel Modeling&lt;&#x2F;strong&gt;: Develop a channel model that accurately simulates the characteristics of a 5G MIMO channel, including path loss, fading, and interference. This model will be used to generate realistic channel conditions.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;MIMO Signal Processing&lt;&#x2F;strong&gt;: Implement key MIMO signal processing techniques, such as beamforming, spatial multiplexing, and diversity combining. These techniques are essential for improving the performance and reliability of MIMO systems.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Error Control Coding&lt;&#x2F;strong&gt;: Incorporate error control coding (ECC) schemes, such as turbo codes and LDPC codes, into your simulation. ECC protects data from errors that may occur during transmission over the wireless channel.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Modulation and Demodulation&lt;&#x2F;strong&gt;: Implement modulation and demodulation techniques, such as QAM, PAM, and OFDM, to convert digital data into signals that can be transmitted over the wireless channel.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Link Adaptation&lt;&#x2F;strong&gt;: Develop link adaptation algorithms that dynamically adjust the modulation scheme, coding rate, and transmit power based on the current channel conditions. This will help to optimize the performance of the MIMO system in different scenarios.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Performance Evaluation&lt;&#x2F;strong&gt;: Design metrics and procedures to evaluate the performance of the MIMO configuration. This may include measuring parameters such as throughput, bit error rate (BER), and spectral efficiency.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Optimization and Analysis&lt;&#x2F;strong&gt;: Identify the best parameters and settings for specific applications.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Visualization&lt;&#x2F;strong&gt;: Develop visualization tools to help you visualize the behavior of your MIMO simulation. This can be useful for understanding the system&#x27;s dynamics and identifying potential problems.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Extend to Multiple Antennas&lt;&#x2F;strong&gt;: Massive MIMO systems.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Simulate Different Scenarios&lt;&#x2F;strong&gt;: Different antenna configurations, propagation environments, and traffic patterns will provide a more comprehensive understanding of the performance of MIMO systems in different conditions.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;5g-simulations&quot;&gt;5G simulations&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;qam-over-awgn-channel&quot;&gt;QAM over AWGN channel&lt;&#x2F;h3&gt;
+&lt;!-- templates&#x2F;shortcodes&#x2F;imshow.html, show scaled image given width, height, rel, title, op, quality, caption--&gt;
+
+
+
+
+
+    
+    
+    
+
+
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+&lt;figure&gt;
+    &lt;img src=&quot;https:&amp;#x2F;&amp;#x2F;plotsignal.com&amp;#x2F;processed_images&amp;#x2F;awgn_channel_transmission.4a18340857ab3875.png&quot;  alt=&quot;QAM over AWGN&quot; title=&quot;QAM over AWGN&quot; &#x2F;&gt;
+    &lt;figcaption&gt;QAM transmission over an AWGN channel&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h3 id=&quot;rust-code-of-qam&quot;&gt;Rust code of QAM&lt;&#x2F;h3&gt;
+&lt;pre&gt;&lt;code data-lang=&quot;rust&quot;&gt;pub fn qam(num_bits_per_symbol: usize, normalize: bool) -&amp;gt; Vec&amp;lt;Complex&amp;lt;f32&amp;gt;&amp;gt; {
+    &#x2F;&#x2F; Check if num_bits_per_symbol is even and greater than zero
+    assert!(
+        num_bits_per_symbol % 2 == 0,
+        &amp;quot;num_bits_per_symbol must be a multiple of 2&amp;quot;
+    );
+    assert!(
+        num_bits_per_symbol &amp;gt; 0,
+        &amp;quot;num_bits_per_symbol must be greater than zero&amp;quot;
+    );
+
+    &#x2F;&#x2F; Build constellation by iterating through all points
+    let mut c = Vec::with_capacity(2usize.pow(num_bits_per_symbol as u32));
+    for i in 0..2usize.pow(num_bits_per_symbol as u32) {
+        let b: Vec&amp;lt;_&amp;gt; = format!(&amp;quot;{:0width$b}&amp;quot;, i, width = num_bits_per_symbol)
+            .chars()
+            .map(|c| c.to_digit(10).unwrap() as i32)
+            .collect();
+
+        let real_part = pam_gray(
+            &amp;amp;b[0..num_bits_per_symbol]
+                .iter()
+                .cloned()
+                .step_by(2)
+                .collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;(),
+        );
+        let imag_part = pam_gray(
+            &amp;amp;b[1..num_bits_per_symbol]
+                .iter()
+                .cloned()
+                .step_by(2)
+                .collect::&amp;lt;Vec&amp;lt;_&amp;gt;&amp;gt;(),
+        );
+
+        c.push(Complex::new(real_part as f32, imag_part as f32));
+    }
+
+    if normalize {
+        &#x2F;&#x2F; Normalize to unit energy
+        let n = num_bits_per_symbol &#x2F; 2;
+        let n1 = n as isize;
+        let qam_var = (1..=2usize.pow(n as u32 - 1))
+            .map(|i| (2 * i - 1).pow(2))
+            .sum::&amp;lt;usize&amp;gt;() as f32
+            &#x2F; 2f32.powi((n1 - 2) as i32);
+        c.iter_mut().for_each(|point| *point &#x2F;= qam_var.sqrt());
+    }
+
+    c
+}
+
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;ul&gt;
+&lt;li&gt;PAM gray labeling&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;pre&gt;&lt;code data-lang=&quot;rust&quot;&gt;&#x2F;&#x2F;&#x2F; Maps a bit vector to a PAM constellation point with Gray labeling.
+pub fn pam_gray(b: &amp;amp;[i32]) -&amp;gt; i32 {
+    if b.len() &amp;gt; 1 {
+        return (1 - 2 * b[0]) * ((2_i32).pow(b.len() as u32 - 1) - pam_gray(&amp;amp;b[1..]));
+    }
+    1 - 2 * b[0]
+}
+&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;pencil2-fast-forward&quot;&gt;&lt;strong&gt;✏️&lt;&#x2F;strong&gt;...⏩&lt;&#x2F;h3&gt;
+</content>
+        
+    </entry>
+</feed>

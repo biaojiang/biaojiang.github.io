@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    <title>Family Photos Web: Private Photo Sharing with Cloud Run and Local Tunnels - Biao J.&#x27;s Online Portfolio</title>
+    <meta name="description" content="Hi, I&#x27;m a senior data scientist, researcher. I exclusively utilize Rust, Go, and Python for their distinct strengths in various tasks. Additionally, I harness the potent capabilities of LaTeX&#x2F;TikZ to produce visually stunning and insightful technical documents.">
+
+    
+    <link rel="stylesheet" href="https://plotsignal.com/base.css">
+    <link rel="stylesheet" href="https://plotsignal.com/auto.css">
+
+    <link rel="preload" href=https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;font-awesome&#x2F;6.3.0&#x2F;css&#x2F;all.min.css as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href=https:&#x2F;&#x2F;cdnjs.cloudflare.com&#x2F;ajax&#x2F;libs&#x2F;font-awesome&#x2F;6.3.0&#x2F;css&#x2F;all.min.css></noscript>
+
+    
+    <link rel="alternate" type="application/atom+xml" title="RSS" href="https://plotsignal.com/atom.xml">
+    
+
+    
+    
+    <meta property="og:locale" content="en_US">
+    
+    <meta property="og:title" content="Family Photos Web: Private Photo Sharing with Cloud Run and Local Tunnels">
+    
+    <meta property="og:type" content="article">
+    <meta property="article:author" content="https://plotsignal.com/about/">
+    <meta property="article:published_time" content="2025-12-19T17:31:12Z">
+    
+    
+    <meta property="article:tag" content="web">
+    
+    <meta property="article:tag" content="privacy">
+    
+    <meta property="article:tag" content="cloud">
+    
+    <meta property="article:tag" content="cloud-run">
+    
+    <meta property="article:tag" content="gcs">
+    
+    <meta property="article:tag" content="cloudflare">
+    
+    
+    
+    
+    <meta property="og:url" content="https://plotsignal.com/projects/family-photos-web/">
+    
+    
+
+
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZWHEYLEC5T"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZWHEYLEC5T');
+</script>
+
+<link rel="stylesheet" href="https://plotsignal.com/bj.css">
+<!-- MathJax enabling -->
+<script>
+MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']]
+  }
+};
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+    
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3129770554069679"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    
+    
+    <header>
+        <h1 class="site-header">
+            <a href="https:&#x2F;&#x2F;plotsignal.com">Biao J.&#x27;s Online Portfolio</a>
+        </h1>
+        <nav>
+            <ul>
+            
+            
+                
+                <li><a  href="&#x2F;projects&#x2F;">Projects</a></li>
+            
+                
+                <li><a  href="&#x2F;blog&#x2F;">Blog</a></li>
+            
+                
+                <li><a  href="&#x2F;collabs&#x2F;">Collabs</a></li>
+            
+                
+                <li><a  href="&#x2F;about&#x2F;">About</a></li>
+            
+            
+            </ul>
+        </nav>
+    </header>
+    
+    
+
+<article class="post">
+    
+    
+    
+        
+        <header>
+            <h1>
+                Family Photos Web: Private Photo Sharing with Cloud Run and Local Tunnels
+                
+            </h1>
+            
+            
+        </header>
+        
+    <div class="article-info">
+        
+        
+        <div class="article-date">December 19, 2025 ◦ 3 min ◦ </div>
+        
+        <div class="article-taxonomies">
+            
+                <ul class="article-categories">
+                    
+                    <li><a href="https://plotsignal.com/categories/cloud/">Cloud</a></li>
+                    
+                </ul>
+            
+            
+                <ul class="article-tags">
+                    
+                    <li><a href="https://plotsignal.com/tags/web/">#web</a></li>
+                    
+                    <li><a href="https://plotsignal.com/tags/privacy/">#privacy</a></li>
+                    
+                    <li><a href="https://plotsignal.com/tags/cloud/">#cloud</a></li>
+                    
+                    <li><a href="https://plotsignal.com/tags/cloud-run/">#cloud-run</a></li>
+                    
+                    <li><a href="https://plotsignal.com/tags/gcs/">#gcs</a></li>
+                    
+                    <li><a href="https://plotsignal.com/tags/cloudflare/">#cloudflare</a></li>
+                    
+                </ul>
+            
+        </div>
+    </div>
+
+    
+    
+    <div class="content">
+        <h2 id="purpose">Purpose</h2>
+<p>Family Photos Web is a private photo-sharing solution designed for small, trusted
+circles. The goal is to share family albums securely with minimal friction, while
+remaining fast and reachable across regions — especially for users behind the Great
+Firewall in China.</p>
+<p>Instead of relying on social platforms or heavy SaaS tools, this project focuses on
+direct sharing, predictable performance, and full control over data and access.</p>
+<h2 id="architecture-overview">Architecture Overview</h2>
+<p>The system combines a cloud-hosted service with local sharing via secure tunnels:</p>
+<ul>
+<li>A lightweight backend service runs on <strong>Google Cloud Run</strong></li>
+<li>Photos are stored privately in <strong>Google Cloud Storage (GCS)</strong></li>
+<li>Access can be provided either via a public endpoint or through
+<strong>cloudflared tunnels</strong> from a local host</li>
+<li>Cloudflare is used for DNS, TLS termination, and global edge routing</li>
+</ul>
+<p>This hybrid setup allows flexible deployment: fully cloud-hosted when needed, or
+locally hosted with global access when speed or locality matters.</p>
+<p><img src="https://assets.plotsignal.com/assets/svg/family-photos-web_architecture.svg" alt="Architecture diagram" /></p>
+<h2 id="request-flow">Request Flow</h2>
+<h3 id="cloud-hosted-mode">Cloud-hosted mode</h3>
+<ol>
+<li>
+<p><strong>User Browser</strong></p>
+<ul>
+<li>Users access the site through a standard web browser.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cloudflare Edge</strong></p>
+<ul>
+<li>DNS and TLS are handled by Cloudflare.</li>
+<li>Traffic is routed through Cloudflare’s global network.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cloud Run Service</strong></p>
+<ul>
+<li>A stateless backend handles authentication, album listing, and access checks.</li>
+<li>Business logic remains minimal and easy to scale.</li>
+</ul>
+</li>
+<li>
+<p><strong>Google Cloud Storage</strong></p>
+<ul>
+<li>Photos are stored as private objects in GCS.</li>
+<li>Media is fetched only after authorization succeeds.</li>
+</ul>
+</li>
+</ol>
+<h3 id="local-host-sharing-mode-cloudflared">Local-host sharing mode (cloudflared)</h3>
+<ol>
+<li>
+<p><strong>Local Host</strong></p>
+<ul>
+<li>The service runs locally on a home or personal machine.</li>
+<li>Albums can be updated or managed without cloud deployment.</li>
+</ul>
+</li>
+<li>
+<p><strong>cloudflared Tunnel</strong></p>
+<ul>
+<li>cloudflared exposes the local service securely to the internet.</li>
+<li>No inbound ports or public IPs are required.</li>
+</ul>
+</li>
+<li>
+<p><strong>Remote Users</strong></p>
+<ul>
+<li>Family members access the site through the tunnel endpoint.</li>
+<li>This path often provides <strong>lower latency and better reachability</strong>
+for users in restricted networks.</li>
+</ul>
+</li>
+</ol>
+<h2 id="technology-stack">Technology Stack</h2>
+<ul>
+<li><strong>Google Cloud Run</strong> — stateless backend service</li>
+<li><strong>Google Cloud Storage (GCS)</strong> — private photo storage</li>
+<li><strong>cloudflared</strong> — secure tunneling for local hosting and sharing</li>
+<li><strong>Cloudflare DNS &amp; TLS</strong> — domain management and HTTPS</li>
+</ul>
+<h2 id="why-this-architecture-works-well">Why This Architecture Works Well</h2>
+<ul>
+<li>
+<p><strong>Flexible deployment</strong></p>
+<ul>
+<li>Switch between cloud-hosted and local-hosted modes without changing clients.</li>
+</ul>
+</li>
+<li>
+<p><strong>Improved performance for international access</strong></p>
+<ul>
+<li>cloudflared tunnels often perform better than traditional cloud endpoints
+for users behind restrictive firewalls.</li>
+</ul>
+</li>
+<li>
+<p><strong>Privacy-first</strong></p>
+<ul>
+<li>Photos remain under direct control and are never published to public platforms.</li>
+</ul>
+</li>
+<li>
+<p><strong>Low operational overhead</strong></p>
+<ul>
+<li>Cloud Run scales automatically.</li>
+<li>No VM management or persistent servers.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cost-efficient</strong></p>
+<ul>
+<li>Pay only for actual usage.</li>
+<li>Local hosting avoids unnecessary cloud egress when possible.</li>
+</ul>
+</li>
+</ul>
+<h2 id="notes">Notes</h2>
+<p>This project favors simplicity and control over feature completeness. By combining
+Cloud Run for scalable cloud access with cloudflared for fast local sharing, it
+provides a practical solution for private, international family photo sharing without
+introducing unnecessary complexity or vendor lock-in.</p>
+
+    </div>
+    
+
+    
+</article>
+
+
+    <footer>
+        <p>
+            
+<span class="icon-text">
+  
+
+  
+  <a href="https://twitter.com/biajia" aria-label="Open biajia Twitter" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-twitter fa-lg" aria-hidden="true" title="Twitter"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https://github.com/biaojiang" aria-label="Open biaojiang GitHub" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-github fa-lg" aria-hidden="true" title="GitHub"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https://www.linkedin.com/in/biaojiang" aria-label="Open biaojiang LinkedIn" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-linkedin fa-lg" aria-hidden="true" title="LinkedIn"></i>
+    </span>
+  </a>
+  
+
+  
+
+  
+
+  
+
+  
+  <a href="mailto:info@plotsignal.com" aria-label="Email info@plotsignal.com" target="_blank">
+    <span class="icon is-large">
+      <i class="far fa-envelope fa-lg" aria-hidden="true" title="email"></i>
+    </span>
+  </a>
+  
+
+  
+  <a href="https:&#x2F;&#x2F;plotsignal.com/atom.xml" aria-label="Open atom xml feed" target="_blank">
+    <span class="icon is-large">
+      <i class="fas fa-rss fa-lg" aria-hidden="true" title="atom xml feed"></i>
+    </span>
+  </a>
+  
+
+  
+</span>
+
+        </p>
+        <p>
+            
+            
+        </p>
+    </footer>
+</div>
+</body>
+</html>

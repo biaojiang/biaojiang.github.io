@@ -1,0 +1,15 @@
+{
+  "Data Science": "data-science",
+  "Algorithms": "algorithm",
+  "Python": "python",
+  "Golang": "go",
+  "Rust": "rust",
+  "Latex": "latex",
+  "Tikz": "tikz",
+  "Machine Learning": "ML",
+  "AI": "AI",
+  "Sensors": "sensor",
+  "Digital Signal Processing": "dsp",
+  "Azure": "azure",
+  "GCP": "gcp"
+}
